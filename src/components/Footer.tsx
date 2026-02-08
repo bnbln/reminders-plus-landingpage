@@ -78,8 +78,11 @@ export default function Footer() {
 
                 {/* Large Logo */}
                 <div className="border-t border-gray-800 pt-12">
-                    <div className="text-center">
-                        <span className="text-7xl md:text-9xl font-semibold tracking-tight opacity-50 block">
+                    <div className="w-full overflow-hidden px-4">
+                        <span
+                            className="font-semibold tracking-tight opacity-50 block text-center whitespace-nowrap"
+                            style={{ fontSize: 'clamp(2rem, 15vw, 10rem)' }}
+                        >
                             Reminders+
                         </span>
                     </div>
