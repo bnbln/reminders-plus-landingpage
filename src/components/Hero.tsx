@@ -28,7 +28,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-                    className="text-5xl md:text-7xl font-serif leading-tight mb-6"
+                    className="text-5xl md:text-7xl font-sans leading-tight mb-6"
                 >
                     One task a day.<br />
                     Endless results.

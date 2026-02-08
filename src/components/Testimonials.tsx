@@ -39,7 +39,7 @@ export default function Testimonials() {
     return (
         <section className="py-20 px-6 bg-[#F0F0F0]">
             <div className="max-w-5xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-serif text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-sans text-center mb-16">
                     They love it, so will you
                 </h2>
 
@@ -47,7 +47,7 @@ export default function Testimonials() {
                     {testimonials.map((testimonial, index) => (
                         <div key={index} className="card bg-white">
                             <StarRating />
-                            <h3 className="text-xl font-serif mb-4">"{testimonial.quote}"</h3>
+                            <h3 className="text-xl font-sans mb-4">"{testimonial.quote}"</h3>
                             <div className="text-sm text-gray-600">
                                 <span className="font-medium">{testimonial.author}</span>
                                 <span className="mx-2">·</span>

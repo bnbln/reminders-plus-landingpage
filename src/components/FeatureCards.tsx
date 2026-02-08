@@ -6,7 +6,7 @@ export default function FeatureCards() {
             <div className="max-w-5xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-serif mb-4">
+                    <h2 className="text-4xl md:text-5xl font-sans mb-4">
                         Simple habits,<br />
                         powerful results.
                     </h2>
