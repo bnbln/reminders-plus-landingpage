@@ -51,7 +51,7 @@ export default function Footer() {
                             ))}
                         </ul>
                     </div>
-                    <div>
+                    {/* <div>
                         <h4 className="font-medium mb-4">Social</h4>
                         <ul className="space-y-2">
                             {footerLinks.social.map((link) => (
@@ -62,7 +62,7 @@ export default function Footer() {
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </div> */}
                     <div>
                         <h4 className="font-medium mb-4">Get Started</h4>
                         <Link

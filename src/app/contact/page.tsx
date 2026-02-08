@@ -32,7 +32,7 @@ export default function Contact() {
                                 href="mailto:support@reminders.plus"
                                 className="text-[#0070E1] hover:underline font-medium"
                             >
-                                support@reminders.plus
+                                support@benediktschnupp.com
                             </a>
                         </div>
 
@@ -48,10 +48,10 @@ export default function Contact() {
                                 Have a suggestion or feature request? Let us know!
                             </p>
                             <a
-                                href="mailto:feedback@reminders.plus"
+                                href="mailto:feedback@benediktschnupp.com"
                                 className="text-[#0070E1] hover:underline font-medium"
                             >
-                                feedback@reminders.plus
+                                feedback@benediktschnupp.com
                             </a>
                         </div>
 
@@ -67,10 +67,10 @@ export default function Contact() {
                                 For all other questions and inquiries.
                             </p>
                             <a
-                                href="mailto:hello@reminders.plus"
+                                href="mailto:hello@benediktschnupp.com"
                                 className="text-[#0070E1] hover:underline font-medium"
                             >
-                                hello@reminders.plus
+                                hello@benediktschnupp.com
                             </a>
                         </div>
 
