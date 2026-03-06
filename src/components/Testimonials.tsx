@@ -8,12 +8,12 @@ const testimonials = [
     },
     {
         quote: "The streak system is incredibly motivating",
-        author: "Michael T.",
+        author: "Chris H.",
         role: "Daily User"
     },
     {
         quote: "Simple, beautiful, and it just works",
-        author: "Emma L.",
+        author: "Maria W.",
         role: "Habit Builder"
     }
 ];

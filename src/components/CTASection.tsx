@@ -19,7 +19,7 @@ export default function CTASection() {
                             <div className="w-56 md:w-64 shadow-2xl rounded-3xl overflow-hidden">
                                 <div className="aspect-[9/19] relative">
                                     <Image
-                                        src="/screens/light-00004.png"
+                                        src="/screens/IMG_3085.PNG"
                                         alt="Reminders+ Streaks"
                                         fill
                                         className="object-cover"

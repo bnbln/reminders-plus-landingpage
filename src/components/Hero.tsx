@@ -28,7 +28,10 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-                    className="text-5xl md:text-7xl font-sans leading-tight mb-6"
+                    className="text-5xl md:text-7xl font-sans mb-6 wheight-900"
+                    style={{
+                        letterSpacing: "-3%"
+                    }}
                 >
                     One task a day.<br />
                     Endless results.
@@ -74,7 +77,7 @@ export default function Hero() {
                         >
                             <div className="aspect-[9/19] relative">
                                 <Image
-                                    src="/screens/dark-00004.png"
+                                    src="/screens/IMG_3086.PNG"
                                     alt="Reminders+ Tasks Screen"
                                     fill
                                     className="object-cover"
@@ -92,7 +95,7 @@ export default function Hero() {
                         >
                             <div className="aspect-[9/19] relative">
                                 <Image
-                                    src="/screens/light-00001.png"
+                                    src="/screens/Bildschirmfoto 2026-03-06 um 22.18.15.png"
                                     alt="Reminders+ Streaks Screen"
                                     fill
                                     className="object-cover"
