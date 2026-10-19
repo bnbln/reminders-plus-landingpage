@@ -11,7 +11,6 @@ const fi: Dictionary = {
         faq: 'UKK',
         download: 'Lataa',
         home: 'Etusivu',
-        logoAlt: 'Reminders+ -logo',
     },
     language: {
         label: 'Kieli',
@@ -142,7 +141,6 @@ const fi: Dictionary = {
         step2: 'Lisää ensimmäinen tehtäväsi',
         step3: 'Aloita putkesi!',
         appSubtitle: 'Tehtävät & tavat',
-        appIconAlt: 'Reminders+ -sovelluskuvake',
         badgeAlt: 'Lataa App Storesta',
         note: 'Ilmainen lataus · Tiliä ei tarvita',
     },
@@ -179,20 +177,18 @@ const fi: Dictionary = {
         originalOnly: 'Tämä asiakirja on saatavilla vain englanniksi.',
     },
     a11y: {
-        // Screen reader texts. Mostly invisible, except footerNote.
-        skipToContent: 'Skip to content',
-        mainNav: 'Main',
-        home: 'Reminders+ home',
-        onAppStore: 'on the App Store',
-        newTab: '(opens in a new tab)',
-        highlights: 'Highlights',
-        // {values}: the number of tasks completed on each day, comma separated.
-        activityChart: 'Activity over the last 14 days. Tasks completed per day: {values}.',
-        taskDone: 'done',
-        taskOpen: 'open',
-        rating: '5 out of 5 stars',
-        steps: 'Get started in three steps',
-        footerNote: 'Accessible website · built to WCAG 2.1 AA',
+        skipToContent: 'Siirry sisältöön',
+        mainNav: 'Päävalikko',
+        home: 'Reminders+ etusivu',
+        onAppStore: 'App Storesta',
+        newTab: '(avautuu uuteen välilehteen)',
+        highlights: 'Kohokohdat',
+        activityChart: 'Aktiivisuus viimeisten 14 päivän ajalta. Valmiit tehtävät päivittäin: {values}.',
+        taskDone: 'valmis',
+        taskOpen: 'avoin',
+        rating: '5/5 tähteä',
+        steps: 'Aloita kolmessa vaiheessa',
+        footerNote: 'Saavutettava verkkosivusto · WCAG 2.1 AA',
     },
 };
 

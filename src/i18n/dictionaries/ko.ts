@@ -11,7 +11,6 @@ const ko: Dictionary = {
         faq: 'FAQ',
         download: '다운로드',
         home: '홈',
-        logoAlt: 'Reminders+ 로고',
     },
     language: {
         label: '언어',
@@ -142,7 +141,6 @@ const ko: Dictionary = {
         step2: '첫 작업 추가',
         step3: '연속 기록 시작!',
         appSubtitle: '작업 및 습관',
-        appIconAlt: 'Reminders+ 앱 아이콘',
         badgeAlt: 'App Store에서 다운로드',
         note: '무료 다운로드 · 계정 필요 없음',
     },
@@ -179,20 +177,18 @@ const ko: Dictionary = {
         originalOnly: '이 문서는 영어로만 제공됩니다.',
     },
     a11y: {
-        // Screen reader texts. Mostly invisible, except footerNote.
-        skipToContent: 'Skip to content',
-        mainNav: 'Main',
-        home: 'Reminders+ home',
-        onAppStore: 'on the App Store',
-        newTab: '(opens in a new tab)',
-        highlights: 'Highlights',
-        // {values}: the number of tasks completed on each day, comma separated.
-        activityChart: 'Activity over the last 14 days. Tasks completed per day: {values}.',
-        taskDone: 'done',
-        taskOpen: 'open',
-        rating: '5 out of 5 stars',
-        steps: 'Get started in three steps',
-        footerNote: 'Accessible website · built to WCAG 2.1 AA',
+        skipToContent: '본문으로 건너뛰기',
+        mainNav: '주 메뉴',
+        home: 'Reminders+ 홈',
+        onAppStore: '(App Store)',
+        newTab: '(새 탭에서 열림)',
+        highlights: '주요 기능',
+        activityChart: '최근 14일간의 활동. 일별 완료한 작업 수: {values}.',
+        taskDone: '완료',
+        taskOpen: '미완료',
+        rating: '별점 5점 만점에 5점',
+        steps: '세 단계로 시작하기',
+        footerNote: '접근성을 갖춘 웹사이트 · WCAG 2.1 AA 준수',
     },
 };
 

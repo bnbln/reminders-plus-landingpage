@@ -11,7 +11,6 @@ const hu: Dictionary = {
         faq: 'GYIK',
         download: 'Letöltés',
         home: 'Kezdőlap',
-        logoAlt: 'Reminders+ logó',
     },
     language: {
         label: 'Nyelv',
@@ -142,7 +141,6 @@ const hu: Dictionary = {
         step2: 'Add hozzá az első feladatod',
         step3: 'Kezdd el a sorozatod!',
         appSubtitle: 'Feladatok és szokások',
-        appIconAlt: 'Reminders+ appikon',
         badgeAlt: 'Letöltés az App Store-ból',
         note: 'Ingyenes letöltés · Nem kell fiók',
     },
@@ -179,20 +177,18 @@ const hu: Dictionary = {
         originalOnly: 'Ez a dokumentum csak angol nyelven érhető el.',
     },
     a11y: {
-        // Screen reader texts. Mostly invisible, except footerNote.
-        skipToContent: 'Skip to content',
-        mainNav: 'Main',
-        home: 'Reminders+ home',
-        onAppStore: 'on the App Store',
-        newTab: '(opens in a new tab)',
-        highlights: 'Highlights',
-        // {values}: the number of tasks completed on each day, comma separated.
-        activityChart: 'Activity over the last 14 days. Tasks completed per day: {values}.',
-        taskDone: 'done',
-        taskOpen: 'open',
-        rating: '5 out of 5 stars',
-        steps: 'Get started in three steps',
-        footerNote: 'Accessible website · built to WCAG 2.1 AA',
+        skipToContent: 'Ugrás a tartalomhoz',
+        mainNav: 'Főmenü',
+        home: 'Reminders+ kezdőlap',
+        onAppStore: 'az App Store-ban',
+        newTab: '(új lapon nyílik meg)',
+        highlights: 'Kiemelések',
+        activityChart: 'Az elmúlt 14 nap aktivitása. Naponta elvégzett feladatok: {values}.',
+        taskDone: 'kész',
+        taskOpen: 'nyitott',
+        rating: '5/5 csillag',
+        steps: 'Kezdd el három lépésben',
+        footerNote: 'Akadálymentes weboldal · WCAG 2.1 AA szerint',
     },
 };
 

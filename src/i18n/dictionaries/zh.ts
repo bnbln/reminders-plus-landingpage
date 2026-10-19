@@ -11,7 +11,6 @@ const zh: Dictionary = {
         faq: '常见问题',
         download: '下载',
         home: '首页',
-        logoAlt: 'Reminders+ 标志',
     },
     language: {
         label: '语言',
@@ -142,7 +141,6 @@ const zh: Dictionary = {
         step2: '添加你的第一项任务',
         step3: '开启你的连续记录！',
         appSubtitle: '任务与习惯',
-        appIconAlt: 'Reminders+ 应用图标',
         badgeAlt: '在 App Store 下载',
         note: '免费下载 · 无需注册账户',
     },
@@ -179,20 +177,18 @@ const zh: Dictionary = {
         originalOnly: '本文件仅提供英文版本。',
     },
     a11y: {
-        // Screen reader texts. Mostly invisible, except footerNote.
-        skipToContent: 'Skip to content',
-        mainNav: 'Main',
-        home: 'Reminders+ home',
-        onAppStore: 'on the App Store',
-        newTab: '(opens in a new tab)',
-        highlights: 'Highlights',
-        // {values}: the number of tasks completed on each day, comma separated.
-        activityChart: 'Activity over the last 14 days. Tasks completed per day: {values}.',
-        taskDone: 'done',
-        taskOpen: 'open',
-        rating: '5 out of 5 stars',
-        steps: 'Get started in three steps',
-        footerNote: 'Accessible website · built to WCAG 2.1 AA',
+        skipToContent: '跳到内容',
+        mainNav: '主导航',
+        home: 'Reminders+ 首页',
+        onAppStore: '（App Store）',
+        newTab: '（在新标签页中打开）',
+        highlights: '亮点',
+        activityChart: '过去 14 天的活动。每天完成的任务数：{values}。',
+        taskDone: '已完成',
+        taskOpen: '未完成',
+        rating: '5 星（满分 5 星）',
+        steps: '三步开始使用',
+        footerNote: '无障碍网站 · 符合 WCAG 2.1 AA',
     },
 };
 

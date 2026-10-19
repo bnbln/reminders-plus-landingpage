@@ -13,7 +13,6 @@ const en = {
         faq: 'FAQ',
         download: 'Download',
         home: 'Home',
-        logoAlt: 'Reminders+ logo',
     },
     language: {
         // Accessible name of the language button and heading of its list.
@@ -145,7 +144,6 @@ const en = {
         step2: 'Add your first task',
         step3: 'Start your streak!',
         appSubtitle: 'Tasks & Habits',
-        appIconAlt: 'Reminders+ app icon',
         badgeAlt: 'Download on the App Store',
         note: 'Free download · No account required',
     },

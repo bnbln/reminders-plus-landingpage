@@ -11,7 +11,6 @@ const cs: Dictionary = {
         faq: 'Časté dotazy',
         download: 'Stáhnout',
         home: 'Domů',
-        logoAlt: 'Logo Reminders+',
     },
     language: {
         label: 'Jazyk',
@@ -142,7 +141,6 @@ const cs: Dictionary = {
         step2: 'Přidejte první úkol',
         step3: 'Začněte svou sérii!',
         appSubtitle: 'Úkoly a návyky',
-        appIconAlt: 'Ikona aplikace Reminders+',
         badgeAlt: 'Stáhnout v App Store',
         note: 'Stažení zdarma · Bez nutnosti účtu',
     },
@@ -179,20 +177,18 @@ const cs: Dictionary = {
         originalOnly: 'Tento dokument je k dispozici pouze v angličtině.',
     },
     a11y: {
-        // Screen reader texts. Mostly invisible, except footerNote.
-        skipToContent: 'Skip to content',
-        mainNav: 'Main',
-        home: 'Reminders+ home',
-        onAppStore: 'on the App Store',
-        newTab: '(opens in a new tab)',
-        highlights: 'Highlights',
-        // {values}: the number of tasks completed on each day, comma separated.
-        activityChart: 'Activity over the last 14 days. Tasks completed per day: {values}.',
-        taskDone: 'done',
-        taskOpen: 'open',
-        rating: '5 out of 5 stars',
-        steps: 'Get started in three steps',
-        footerNote: 'Accessible website · built to WCAG 2.1 AA',
+        skipToContent: 'Přejít na obsah',
+        mainNav: 'Hlavní menu',
+        home: 'Domů Reminders+',
+        onAppStore: 'v App Storu',
+        newTab: '(otevře se na nové kartě)',
+        highlights: 'Hlavní přednosti',
+        activityChart: 'Aktivita za posledních 14 dní. Dokončené úkoly za den: {values}.',
+        taskDone: 'hotovo',
+        taskOpen: 'otevřené',
+        rating: '5 z 5 hvězdiček',
+        steps: 'Začněte ve třech krocích',
+        footerNote: 'Přístupný web · podle WCAG 2.1 AA',
     },
 };
 
