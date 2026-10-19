@@ -1,26 +1,26 @@
-'use client';
+import type { Dictionary } from '@/i18n/types';
 
-const testimonials = [
+const testimonials = (t: Dictionary['testimonials']) => [
     {
-        quote: "Finally an app that keeps me consistent",
+        quote: t.quote1,
         author: "Sarah K.",
-        role: "Productivity Enthusiast"
+        role: t.role1
     },
     {
-        quote: "The streak system is incredibly motivating",
+        quote: t.quote2,
         author: "Chris H.",
-        role: "Daily User"
+        role: t.role2
     },
     {
-        quote: "Simple, beautiful, and it just works",
+        quote: t.quote3,
         author: "Maria W.",
-        role: "Habit Builder"
+        role: t.role3
     }
 ];
 
-function StarRating() {
+function StarRating({ label }: { label: string }) {
     return (
-        <div className="flex gap-1 mb-4" role="img" aria-label="5 out of 5 stars">
+        <div className="flex gap-1 mb-4" role="img" aria-label={label}>
             {[1, 2, 3, 4, 5].map((star) => (
                 <svg
                     key={star}
@@ -36,19 +36,19 @@ function StarRating() {
     );
 }
 
-export default function Testimonials() {
+export default function Testimonials({ t, a11y }: { t: Dictionary['testimonials']; a11y: Dictionary['a11y'] }) {
     return (
         <section className="py-20 px-5" aria-labelledby="testimonials-title">
             <div className="max-w-5xl mx-auto">
                 <h2 id="testimonials-title" className="large-title text-4xl md:text-6xl text-center mb-14">
-                    They love it, so will you
+                    {t.title}
                 </h2>
 
                 <ul role="list" className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    {testimonials.map((testimonial, index) => (
+                    {testimonials(t).map((testimonial, index) => (
                         <li key={index}>
                             <figure className="panel p-6 h-full">
-                                <StarRating />
+                                <StarRating label={a11y.rating} />
                                 <blockquote className="text-xl font-bold tracking-tight mb-4">
                                     <p>&ldquo;{testimonial.quote}&rdquo;</p>
                                 </blockquote>

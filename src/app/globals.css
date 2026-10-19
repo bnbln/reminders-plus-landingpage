@@ -223,7 +223,7 @@ body {
 .skip-link {
   position: fixed;
   top: 12px;
-  left: 12px;
+  inset-inline-start: 12px;
   z-index: 100;
   padding: 10px 18px;
   border-radius: 999px;
@@ -247,4 +247,15 @@ body {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
   }
+}
+
+/* Tight tracking only suits Latin, Greek and Cyrillic. Arabic letters must
+   stay joined, and CJK and Devanagari need room. */
+:lang(ar) *, :lang(hi) *, :lang(zh) *, :lang(ja) *, :lang(ko) * {
+  letter-spacing: normal !important;
+}
+
+:lang(ar) .large-title, :lang(hi) .large-title, :lang(zh) .large-title,
+:lang(ja) .large-title, :lang(ko) .large-title {
+  line-height: 1.2;
 }

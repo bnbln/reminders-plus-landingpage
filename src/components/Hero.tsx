@@ -5,8 +5,9 @@ import Image from 'next/image';
 import StreakFlame from '@/components/StreakFlame';
 import { tint } from '@/lib/tint';
 import { APP_STORE_URL } from '@/lib/app-info';
+import type { Dictionary } from '@/i18n/types';
 
-export default function Hero() {
+export default function Hero({ t, a11y }: { t: Dictionary['hero']; a11y: Dictionary['a11y'] }) {
     return (
         <MotionConfig reducedMotion="user">
             <section className="pt-32 pb-16 px-6 relative overflow-hidden">
@@ -20,12 +21,12 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, ease: "easeOut" }}
-                        className="inline-flex items-center gap-2 tile rounded-full pl-2 pr-4 py-1.5 mb-8"
+                        className="inline-flex items-center gap-2 tile rounded-full ps-2 pe-4 py-1.5 mb-8"
                     >
                         <span className="badge-icon w-7 h-7" style={tint('var(--flame-outer)')}>
                             <StreakFlame className="w-3.5 h-4" />
                         </span>
-                        <span className="text-sm font-semibold">Start your streak today</span>
+                        <span className="text-sm font-semibold">{t.badge}</span>
                     </motion.div>
 
                     {/* Headline */}
@@ -35,8 +36,8 @@ export default function Hero() {
                         transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
                         className="large-title text-[44px] md:text-[80px] mb-6"
                     >
-                        One task a day.<br />
-                        Endless results.
+                        {t.titleLine1}<br />
+                        {t.titleLine2}
                     </motion.h1>
 
                     {/* Subheadline */}
@@ -46,7 +47,7 @@ export default function Hero() {
                         transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
                         className="text-lg md:text-xl text-label-secondary mb-8 max-w-lg mx-auto"
                     >
-                        Build lasting habits with daily streaks. Organize tasks and routines in one beautiful app.
+                        {t.subtitle}
                     </motion.p>
 
                     {/* CTA Button */}
@@ -59,8 +60,8 @@ export default function Hero() {
                         transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
                         className="btn-primary text-[17px] !px-7 !py-3.5"
                     >
-                        Download free
-                        <span className="sr-only"> on the App Store (opens in a new tab)</span>
+                        {t.cta}
+                        <span className="sr-only"> {a11y.onAppStore} {a11y.newTab}</span>
                     </motion.a>
 
                     <motion.p
@@ -69,7 +70,7 @@ export default function Hero() {
                         transition={{ duration: 0.5, delay: 0.4 }}
                         className="mt-4 text-sm text-label-secondary"
                     >
-                        iPhone &amp; iPad · No account needed
+                        {t.note}
                     </motion.p>
 
                     {/* Phone Mockups Container */}
@@ -90,7 +91,7 @@ export default function Hero() {
                                 <div className="aspect-[9/19] relative">
                                     <Image
                                         src="/screens/IMG_3086.PNG"
-                                        alt="Reminders+ on iPhone: the Tasks screen with today's tasks and routines"
+                                        alt={t.tasksScreenAlt}
                                         fill
                                         className="object-cover"
                                         priority
@@ -108,7 +109,7 @@ export default function Hero() {
                                 <div className="aspect-[9/19] relative">
                                     <Image
                                         src="/screens/Bildschirmfoto 2026-03-06 um 22.18.15.png"
-                                        alt="Reminders+ on iPhone: the Streaks screen with the current streak and an activity chart"
+                                        alt={t.streaksScreenAlt}
                                         fill
                                         className="object-cover"
                                         priority
