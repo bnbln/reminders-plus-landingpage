@@ -13,11 +13,11 @@ const navLinks = [
 export default function Header() {
     return (
         <header className="fixed top-0 left-0 right-0 z-50 glass backdrop-blur-xl backdrop-saturate-[1.8] border-b border-separator">
-            <nav className="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
-                <Link href="/" className="flex items-center gap-2.5">
+            <nav aria-label="Main" className="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+                <Link href="/" aria-label="Reminders+ home" className="flex items-center gap-2.5">
                     <Image
                         src="/icon.png"
-                        alt="Reminders+ Logo"
+                        alt=""
                         width={28}
                         height={28}
                         className="rounded-[7px]"
@@ -25,17 +25,18 @@ export default function Header() {
                     <span className="font-bold text-[17px] tracking-tight">Reminders+</span>
                 </Link>
 
-                <div className="hidden md:flex items-center gap-8">
+                <ul role="list" className="hidden md:flex items-center gap-8">
                     {navLinks.map((link) => (
-                        <Link
-                            key={link.href}
-                            href={link.href}
-                            className="text-[15px] font-medium text-label-secondary hover:text-label transition-colors"
-                        >
-                            {link.label}
-                        </Link>
+                        <li key={link.href}>
+                            <Link
+                                href={link.href}
+                                className="text-[15px] font-medium text-label-secondary hover:text-label transition-colors"
+                            >
+                                {link.label}
+                            </Link>
+                        </li>
                     ))}
-                </div>
+                </ul>
 
                 <Link
                     href={APP_STORE_URL}
@@ -44,6 +45,7 @@ export default function Header() {
                     rel="noopener noreferrer"
                 >
                     Download
+                    <span className="sr-only"> Reminders+ on the App Store (opens in a new tab)</span>
                 </Link>
             </nav>
         </header>

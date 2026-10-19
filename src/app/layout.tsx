@@ -19,6 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
+        <a href="#main" className="skip-link">
+          Skip to content
+        </a>
         {children}
         <Analytics />
       </body>

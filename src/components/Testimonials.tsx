@@ -20,10 +20,11 @@ const testimonials = [
 
 function StarRating() {
     return (
-        <div className="flex gap-1 mb-4">
+        <div className="flex gap-1 mb-4" role="img" aria-label="5 out of 5 stars">
             {[1, 2, 3, 4, 5].map((star) => (
                 <svg
                     key={star}
+                    aria-hidden="true"
                     className="w-4 h-4 text-ios-orange"
                     fill="currentColor"
                     viewBox="0 0 20 20"
@@ -37,25 +38,30 @@ function StarRating() {
 
 export default function Testimonials() {
     return (
-        <section className="py-20 px-5">
+        <section className="py-20 px-5" aria-labelledby="testimonials-title">
             <div className="max-w-5xl mx-auto">
-                <h2 className="large-title text-4xl md:text-6xl text-center mb-14">
+                <h2 id="testimonials-title" className="large-title text-4xl md:text-6xl text-center mb-14">
                     They love it, so will you
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <ul role="list" className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {testimonials.map((testimonial, index) => (
-                        <div key={index} className="panel p-6">
-                            <StarRating />
-                            <h3 className="text-xl font-bold tracking-tight mb-4">&ldquo;{testimonial.quote}&rdquo;</h3>
-                            <div className="text-sm text-label-secondary">
-                                <span className="font-medium">{testimonial.author}</span>
-                                <span className="mx-2">·</span>
-                                <span>{testimonial.role}</span>
-                            </div>
-                        </div>
+                        <li key={index}>
+                            <figure className="panel p-6 h-full">
+                                <StarRating />
+                                <blockquote className="text-xl font-bold tracking-tight mb-4">
+                                    <p>&ldquo;{testimonial.quote}&rdquo;</p>
+                                </blockquote>
+                                <figcaption className="text-sm text-label-secondary">
+                                    <span className="font-medium">{testimonial.author}</span>
+                                    <span className="mx-2" aria-hidden="true">·</span>
+                                    <span className="sr-only">, </span>
+                                    <span>{testimonial.role}</span>
+                                </figcaption>
+                            </figure>
+                        </li>
                     ))}
-                </div>
+                </ul>
             </div>
         </section>
     );

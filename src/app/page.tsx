@@ -44,17 +44,19 @@ export default async function Home() {
     const faqItems = await loadFAQItems();
     
     return (
-        <main className="min-h-screen">
+        <>
             <Header />
-            <Hero />
-            <FeatureIcons />
-            <FeatureCards />
-            <MoreFeatures />
-            <PlusSection />
-            <Testimonials />
-            <FAQ faqItems={faqItems} />
-            <CTASection />
+            <main id="main" className="min-h-screen">
+                <Hero />
+                <FeatureIcons />
+                <FeatureCards />
+                <MoreFeatures />
+                <PlusSection />
+                <Testimonials />
+                <FAQ faqItems={faqItems} />
+                <CTASection />
+            </main>
             <Footer />
-        </main>
+        </>
     );
 }

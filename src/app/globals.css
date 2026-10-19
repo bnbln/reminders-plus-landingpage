@@ -51,12 +51,15 @@
   --bg: #F2F2F7;
   --card: #FFFFFF;
   --label: #000000;
-  --label-secondary: rgba(60, 60, 67, 0.6);
+  /* 0.75 instead of iOS's 0.6 so body text meets WCAG AA (4.5:1) on --bg */
+  --label-secondary: rgba(60, 60, 67, 0.75);
   --label-tertiary: rgba(60, 60, 67, 0.3);
   --separator: rgba(60, 60, 67, 0.12);
   --fill: rgba(120, 120, 128, 0.12);
-  --accent: #007AFF;
-  --accent-pressed: #0062CC;
+  /* A shade deeper than iOS #007AFF so white button text and blue links
+     reach WCAG AA contrast (4.5:1) on white and on --bg */
+  --accent: #0068D9;
+  --accent-pressed: #0056B3;
   --green: #34C759;
   --orange: #FF9500;
   --red: #FF3B30;
@@ -204,8 +207,44 @@ body {
 }
 }
 
+/* Visible keyboard focus everywhere, also on the black footer and the dark
+   Plus card */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.on-dark :focus-visible {
+  outline-color: #FFFFFF;
+}
+
+/* Skip link: hidden until focused with the keyboard */
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #FFFFFF;
+  font-weight: 600;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus-visible {
+  transform: none;
+  outline-color: var(--label);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }

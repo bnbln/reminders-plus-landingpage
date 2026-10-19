@@ -34,10 +34,11 @@ const features = [
 
 export default function FeatureIcons() {
     return (
-        <section className="pb-16 px-5">
-            <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-3">
+        <section className="pb-16 px-5" aria-labelledby="highlights-title">
+            <h2 id="highlights-title" className="sr-only">Highlights</h2>
+            <ul role="list" className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-3">
                 {features.map((feature) => (
-                    <div key={feature.title} className="tile p-4 flex md:flex-col items-center md:items-start gap-4 md:gap-3">
+                    <li key={feature.title} className="tile p-4 flex md:flex-col items-center md:items-start gap-4 md:gap-3">
                         <span className="badge-icon w-10 h-10 shrink-0" style={tint(feature.color)}>
                             {feature.icon}
                         </span>
@@ -45,9 +46,9 @@ export default function FeatureIcons() {
                             <h3 className="text-[17px] font-bold leading-tight">{feature.title}</h3>
                             <p className="text-sm text-label-secondary mt-0.5">{feature.subtitle}</p>
                         </div>
-                    </div>
+                    </li>
                 ))}
-            </div>
+            </ul>
         </section>
     );
 }
