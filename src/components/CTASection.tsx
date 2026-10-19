@@ -2,14 +2,19 @@
 
 import Image from 'next/image';
 import { APP_STORE_URL } from '@/lib/app-info';
+import { localeInfo, type Locale } from '@/i18n/config';
+import type { Dictionary } from '@/i18n/types';
 
-const steps = [
-    { number: 1, text: "Download the app" },
-    { number: 2, text: "Add your first task" },
-    { number: 3, text: "Start your streak!" }
-];
+const badgeUrl = (badgeLocale: string) =>
+    `https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/white/${badgeLocale}?releaseDate=1770163200`;
 
-export default function CTASection() {
+export default function CTASection({ t, locale }: { t: Dictionary['cta']; locale: Locale }) {
+    const steps = [
+        { number: 1, text: t.step1 },
+        { number: 2, text: t.step2 },
+        { number: 3, text: t.step3 },
+    ];
+
     return (
         <section className="py-20 px-5" id="download">
             <div className="max-w-5xl mx-auto">
@@ -22,7 +27,7 @@ export default function CTASection() {
                                 <div className="aspect-[9/19] relative">
                                     <Image
                                         src="/screens/IMG_3085.PNG"
-                                        alt="Reminders+ Streaks"
+                                        alt={t.screenAlt}
                                         fill
                                         className="object-cover"
                                     />
@@ -36,14 +41,14 @@ export default function CTASection() {
                             <div className="flex items-center gap-4 mb-8">
                                 <Image
                                     src="/app-icon.png"
-                                    alt="Reminders+ App Icon"
+                                    alt={t.appIconAlt}
                                     width={80}
                                     height={80}
                                     className="rounded-[18px] shadow-lg"
                                 />
                                 <div>
-                                    <span className="text-2xl font-bold tracking-tight block">Reminders+</span>
-                                    <p className="text-label-secondary">Tasks &amp; Habits</p>
+                                    <span dir="ltr" className="text-2xl font-bold tracking-tight block">Reminders+</span>
+                                    <p className="text-label-secondary">{t.appSubtitle}</p>
                                 </div>
                             </div>
 
@@ -68,14 +73,19 @@ export default function CTASection() {
                             >
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
-                                    src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/white/en-us?releaseDate=1770163200"
-                                    alt="Download on the App Store"
+                                    src={badgeUrl(localeInfo[locale].badge)}
+                                    alt={t.badgeAlt}
+                                    // Apple's English badge if there is none for this language.
+                                    onError={(event) => {
+                                        const fallback = badgeUrl('en-us');
+                                        if (event.currentTarget.src !== fallback) event.currentTarget.src = fallback;
+                                    }}
                                     style={{ width: '200px', height: '67px', verticalAlign: 'middle', objectFit: 'contain' }}
                                 />
                             </a>
 
-                            <p className="text-label-secondary text-sm mt-4 text-center md:text-left">
-                                Free download • No account required
+                            <p className="text-label-secondary text-sm mt-4 text-center md:text-start">
+                                {t.note}
                             </p>
                         </div>
                     </div>

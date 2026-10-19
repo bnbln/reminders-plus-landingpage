@@ -4,14 +4,18 @@ import ReactMarkdown from 'react-markdown';
 import { promises as fs } from 'fs';
 import path from 'path';
 import Link from 'next/link';
+import type { Locale } from '@/i18n/config';
+import { getDictionary } from '@/i18n/dictionaries';
 
+// The text is only published in English; every language links here.
 export const metadata = {
+    alternates: { canonical: '/en/privacy' },
     title: 'Privacy Policy — Reminders+',
     description: 'Privacy Policy for Reminders+ iOS app and website',
 };
 
 // Custom components for styled markdown rendering
-const components = {
+const components = (locale: Locale) => ({
     h1: ({ children }: { children?: React.ReactNode }) => (
         <h1 className="large-title text-4xl md:text-5xl mb-8">{children}</h1>
     ),
@@ -25,7 +29,7 @@ const components = {
         <p className="text-label leading-relaxed mb-4">{children}</p>
     ),
     ul: ({ children }: { children?: React.ReactNode }) => (
-        <ul className="list-disc pl-6 space-y-2 text-label mb-4">{children}</ul>
+        <ul className="list-disc ps-6 space-y-2 text-label mb-4">{children}</ul>
     ),
     li: ({ children }: { children?: React.ReactNode }) => (
         <li className="text-label">{children}</li>
@@ -35,30 +39,37 @@ const components = {
     ),
     a: ({ href, children }: { href?: string; children?: React.ReactNode }) => {
         if (href?.startsWith('/')) {
-            return <Link href={href} className="text-accent hover:underline">{children}</Link>;
+            return <Link href={`/${locale}${href}`} className="text-accent hover:underline">{children}</Link>;
         }
         return <a href={href} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">{children}</a>;
     },
     hr: () => <hr className="my-8 border-separator" />,
-};
+});
 
-export default async function PrivacyPolicy() {
+export default async function PrivacyPolicy({ params }: PageProps<'/[lang]/privacy'>) {
+    const locale = (await params).lang as Locale;
+    const dict = getDictionary(locale);
     const filePath = path.join(process.cwd(), 'content', 'privacy.md');
     const content = await fs.readFile(filePath, 'utf8');
 
     return (
         <>
-            <Header />
+            <Header locale={locale} dict={dict} />
             <main className="min-h-screen pt-24">
                 <article className="max-w-4xl mx-auto px-6 py-16">
-                    <div className="panel p-6 md:p-12 space-y-2">
-                        <ReactMarkdown components={components}>
+                    {dict.legal.originalOnly && (
+                        <p lang={locale} className="tile px-5 py-3 mb-6 text-[15px] text-label-secondary">
+                            {dict.legal.originalOnly}
+                        </p>
+                    )}
+                    <div lang="en" className="panel p-6 md:p-12 space-y-2">
+                        <ReactMarkdown components={components(locale)}>
                             {content}
                         </ReactMarkdown>
                     </div>
                 </article>
             </main>
-            <Footer />
+            <Footer locale={locale} dict={dict} />
         </>
     );
 }

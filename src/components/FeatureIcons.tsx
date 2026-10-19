@@ -1,17 +1,18 @@
 import StreakFlame from '@/components/StreakFlame';
 import { tint } from '@/lib/tint';
+import type { Dictionary } from '@/i18n/types';
 
 // Styled like the summary tiles on the app's Tasks and Streaks screens.
-const features = [
+const features = (t: Dictionary['featureIcons']) => [
     {
-        title: 'Daily streaks',
-        subtitle: 'One task a day keeps the fire burning',
+        title: t.streaksTitle,
+        subtitle: t.streaksSubtitle,
         color: 'var(--flame-outer)',
         icon: <StreakFlame className="w-4 h-5" />,
     },
     {
-        title: 'Tasks & routines',
-        subtitle: 'Everything in one place',
+        title: t.tasksTitle,
+        subtitle: t.tasksSubtitle,
         color: 'var(--green)',
         icon: (
             <svg className="w-5 h-5" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -20,8 +21,8 @@ const features = [
         ),
     },
     {
-        title: 'Private by design',
-        subtitle: 'No account, no tracking',
+        title: t.privacyTitle,
+        subtitle: t.privacySubtitle,
         color: 'var(--indigo)',
         icon: (
             <svg className="w-5 h-5" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round">
@@ -32,17 +33,17 @@ const features = [
     },
 ];
 
-export default function FeatureIcons() {
+export default function FeatureIcons({ t }: { t: Dictionary['featureIcons'] }) {
     return (
         <section className="pb-16 px-5">
             <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-3">
-                {features.map((feature) => (
+                {features(t).map((feature) => (
                     <div key={feature.title} className="tile p-4 flex md:flex-col items-center md:items-start gap-4 md:gap-3">
                         <div className="flex items-start justify-between shrink-0 md:w-full">
                             <span className="badge-icon w-10 h-10" style={tint(feature.color)}>
                                 {feature.icon}
                             </span>
-                            <svg className="hidden md:block w-4 h-4 text-label-tertiary mt-1" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                            <svg className="hidden md:block w-4 h-4 text-label-tertiary mt-1 rtl:-scale-x-100" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                                 <path d="m9 18 6-6-6-6" />
                             </svg>
                         </div>

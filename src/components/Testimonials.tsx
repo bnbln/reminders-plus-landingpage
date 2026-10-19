@@ -1,20 +1,20 @@
-'use client';
+import type { Dictionary } from '@/i18n/types';
 
-const testimonials = [
+const testimonials = (t: Dictionary['testimonials']) => [
     {
-        quote: "Finally an app that keeps me consistent",
+        quote: t.quote1,
         author: "Sarah K.",
-        role: "Productivity Enthusiast"
+        role: t.role1
     },
     {
-        quote: "The streak system is incredibly motivating",
+        quote: t.quote2,
         author: "Chris H.",
-        role: "Daily User"
+        role: t.role2
     },
     {
-        quote: "Simple, beautiful, and it just works",
+        quote: t.quote3,
         author: "Maria W.",
-        role: "Habit Builder"
+        role: t.role3
     }
 ];
 
@@ -35,16 +35,16 @@ function StarRating() {
     );
 }
 
-export default function Testimonials() {
+export default function Testimonials({ t }: { t: Dictionary['testimonials'] }) {
     return (
         <section className="py-20 px-5">
             <div className="max-w-5xl mx-auto">
                 <h2 className="large-title text-4xl md:text-6xl text-center mb-14">
-                    They love it, so will you
+                    {t.title}
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    {testimonials.map((testimonial, index) => (
+                    {testimonials(t).map((testimonial, index) => (
                         <div key={index} className="panel p-6">
                             <StarRating />
                             <h3 className="text-xl font-bold tracking-tight mb-4">&ldquo;{testimonial.quote}&rdquo;</h3>
