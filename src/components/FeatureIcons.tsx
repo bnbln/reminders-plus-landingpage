@@ -5,7 +5,9 @@ const features = [
         icon: (
             <svg className="w-12 h-12" aria-hidden="true" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="24" cy="24" r="20" stroke="#0070E1" strokeWidth="2" />
-                <path d="M24 13C24 13 31 19 31 26C31 30.4 27.9 34 24 34C20.1 34 17 30.4 17 26C17 22.5 19 20 20.5 18.5C20.5 21.5 22 23 23.5 23.5C23 19.5 24 16 24 13Z" stroke="#0070E1" strokeWidth="2" strokeLinejoin="round" />
+                <g transform="translate(12 12)" stroke="#0070E1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" />
+                </g>
             </svg>
         ),
         title: "Daily streak system",
@@ -15,7 +17,9 @@ const features = [
         icon: (
             <svg className="w-12 h-12" aria-hidden="true" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="24" cy="24" r="20" stroke="#0070E1" strokeWidth="2" />
-                <path d="M16 24L22 30L32 18" stroke="#0070E1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <g transform="translate(12 12)" stroke="#0070E1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M20 6 9 17l-5-5" />
+                </g>
             </svg>
         ),
         title: "Tasks & routines in one place",
@@ -25,8 +29,10 @@ const features = [
         icon: (
             <svg className="w-12 h-12" aria-hidden="true" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="24" cy="24" r="20" stroke="#0070E1" strokeWidth="2" />
-                <rect x="17" y="22" width="14" height="11" rx="2" stroke="#0070E1" strokeWidth="2" />
-                <path d="M20 22V19C20 16.8 21.8 15 24 15C26.2 15 28 16.8 28 19V22" stroke="#0070E1" strokeWidth="2" strokeLinecap="round" />
+                <g transform="translate(12 12)" stroke="#0070E1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" />
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                </g>
             </svg>
         ),
         title: "Private by design, no account",
