@@ -2,40 +2,44 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { APP_STORE_URL } from '@/lib/app-info';
+
+const navLinks = [
+    { label: 'Features', href: '/#features' },
+    { label: 'Plus', href: '/#plus' },
+    { label: 'FAQ', href: '/#faq' },
+];
 
 export default function Header() {
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-[#F7F7F7]/80 backdrop-blur-md">
-            <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-                {/* Logo */}
-                <Link href="/" className="flex items-center gap-2">
+        <header className="fixed top-0 left-0 right-0 z-50 glass backdrop-blur-xl backdrop-saturate-[1.8] border-b border-separator">
+            <nav className="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+                <Link href="/" className="flex items-center gap-2.5">
                     <Image
                         src="/icon.png"
                         alt="Reminders+ Logo"
-                        width={24}
-                        height={24}
-                        className="rounded-lg"
+                        width={28}
+                        height={28}
+                        className="rounded-[7px]"
                     />
-                    <span className="font-semibold text-lg">Reminders+</span>
+                    <span className="font-bold text-[17px] tracking-tight">Reminders+</span>
                 </Link>
 
-                {/* Nav Links */}
                 <div className="hidden md:flex items-center gap-8">
-                    <Link href="/" className="text-sm font-medium hover:text-[#0070E1] transition-colors">
-                        Home
-                    </Link>
-                    <Link href="#features" className="text-sm font-medium hover:text-[#0070E1] transition-colors">
-                        Features
-                    </Link>
-                    <Link href="#faq" className="text-sm font-medium hover:text-[#0070E1] transition-colors">
-                        FAQ
-                    </Link>
+                    {navLinks.map((link) => (
+                        <Link
+                            key={link.href}
+                            href={link.href}
+                            className="text-[15px] font-medium text-label-secondary hover:text-label transition-colors"
+                        >
+                            {link.label}
+                        </Link>
+                    ))}
                 </div>
 
-                {/* Download Button */}
                 <Link
-                    href="https://apps.apple.com/us/app/reminders/id6758573672"
-                    className="btn-primary text-sm"
+                    href={APP_STORE_URL}
+                    className="btn-primary text-[15px] !py-2 !px-4"
                     target="_blank"
                     rel="noopener noreferrer"
                 >

@@ -6,7 +6,7 @@
 
 Having issues with the app? We're here to help.
 
-📧 **support@reminders.plus**
+📧 **support@benediktschnupp.com**
 
 ## Feedback
 

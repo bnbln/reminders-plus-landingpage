@@ -1,55 +1,52 @@
-'use client';
+import StreakFlame from '@/components/StreakFlame';
+import { tint } from '@/lib/tint';
 
+// Styled like the summary tiles on the app's Tasks and Streaks screens.
 const features = [
     {
-        icon: (
-            <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="24" cy="24" r="20" stroke="#0070E1" strokeWidth="2" />
-                <text x="24" y="30" textAnchor="middle" fontSize="20">🔥</text>
-            </svg>
-        ),
-        title: "Daily streak system",
-        glow: "glow-blue"
+        title: 'Daily streaks',
+        subtitle: 'One task a day keeps the fire burning',
+        color: 'var(--flame-outer)',
+        icon: <StreakFlame className="w-4 h-5" />,
     },
     {
+        title: 'Tasks & routines',
+        subtitle: 'Everything in one place',
+        color: 'var(--green)',
         icon: (
-            <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="24" cy="24" r="20" stroke="#0070E1" strokeWidth="2" />
-                <path d="M16 24L22 30L32 18" stroke="#0070E1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <svg className="w-5 h-5" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M20 6 9 17l-5-5" />
             </svg>
         ),
-        title: "Tasks & routines in one place",
-        glow: "glow-green"
     },
     {
+        title: 'Private by design',
+        subtitle: 'No account, no tracking',
+        color: 'var(--indigo)',
         icon: (
-            <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="24" cy="24" r="20" stroke="#0070E1" strokeWidth="2" />
-                <path d="M24 16V24L30 28" stroke="#0070E1" strokeWidth="2" strokeLinecap="round" />
+            <svg className="w-5 h-5" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="4" y="11" width="16" height="10" rx="2.5" />
+                <path d="M8 11V7.5a4 4 0 0 1 8 0V11" />
             </svg>
         ),
-        title: "100% private, local storage",
-        glow: "glow-purple"
-    }
+    },
 ];
 
 export default function FeatureIcons() {
     return (
-        <section className="py-16 px-6">
-            <div className="max-w-4xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {features.map((feature, index) => (
-                        <div key={index} className="flex flex-col items-center text-center">
-                            <div className={`relative w-24 h-24 flex items-center justify-center mb-4`}>
-                                <div className={`absolute inset-0 ${feature.glow} opacity-60 rounded-full`} />
-                                <div className="relative z-10">
-                                    {feature.icon}
-                                </div>
-                            </div>
-                            <h3 className="text-sm font-medium">{feature.title}</h3>
+        <section className="pb-16 px-5">
+            <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-3">
+                {features.map((feature) => (
+                    <div key={feature.title} className="tile p-4 flex md:flex-col items-center md:items-start gap-4 md:gap-3">
+                        <span className="badge-icon w-10 h-10 shrink-0" style={tint(feature.color)}>
+                            {feature.icon}
+                        </span>
+                        <div className="flex-1">
+                            <h3 className="text-[17px] font-bold leading-tight">{feature.title}</h3>
+                            <p className="text-sm text-label-secondary mt-0.5">{feature.subtitle}</p>
                         </div>
-                    ))}
-                </div>
+                    </div>
+                ))}
             </div>
         </section>
     );

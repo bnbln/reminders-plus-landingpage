@@ -1,8 +1,8 @@
 # Impressum
 
-**Legal Notice according to § 5 TMG**
+**Legal Notice according to § 5 DDG**
 
-## Information according to § 5 TMG
+## Information according to § 5 DDG
 
 **Reminders+**  
 Benedikt Schnupp  
@@ -25,21 +25,19 @@ Not applicable – Small business according to § 19 UStG
 
 ## Responsible for Content
 
-According to § 55 Abs. 2 RStV:
+According to § 18 Abs. 2 MStV:
 
 Benedikt Schnupp  
 Stubenrauchstr. 67  
 12161 Berlin  
 Germany
 
-Max Möckel    
+Max Möckel  
 Kolkwitzer Str. 48  
 03046 Cottbus  
 Germany
 
-## EU Online Dispute Resolution
-
-The European Commission provides a platform for online dispute resolution (OS): [https://ec.europa.eu/consumers/odr/](https://ec.europa.eu/consumers/odr/)
+## Consumer Dispute Resolution
 
 We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board.
 
@@ -47,7 +45,7 @@ We are neither willing nor obliged to participate in dispute resolution proceedi
 
 ### Liability for Content
 
-The contents of our pages have been created with the utmost care. However, we cannot guarantee the contents' accuracy, completeness, or topicality. According to § 7 Abs. 1 TMG, we as service providers are responsible for our own content on these pages under general law. However, according to §§ 8 to 10 TMG, we are not obligated to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity. Obligations to remove or block the use of information under general law remain unaffected. Liability in this regard, however, is only possible from the time of knowledge of a specific infringement. Upon becoming aware of such violations, we will remove this content immediately.
+The contents of our pages have been created with the utmost care. However, we cannot guarantee the contents' accuracy, completeness, or topicality. According to § 7 Abs. 1 DDG, we as service providers are responsible for our own content on these pages under general law. However, according to §§ 8 to 10 DDG, we are not obligated to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity. Obligations to remove or block the use of information under general law remain unaffected. Liability in this regard, however, is only possible from the time of knowledge of a specific infringement. Upon becoming aware of such violations, we will remove this content immediately.
 
 ### Liability for Links
 

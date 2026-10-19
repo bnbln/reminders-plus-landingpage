@@ -1,142 +1,85 @@
 # Privacy Policy
 
-**Last updated: February 8, 2025**
+**Last updated: October 19, 2026** · Applies to Reminders+ version 1.0.6 for iPhone and iPad and to this website.
 
-## 1. Introduction
+## 1. Summary
 
-Reminders+ ("we", "our", "us", or the "Company") operates the Reminders+ mobile application and this website (collectively, the "Services"). This Privacy Policy describes how we may collect, use, store, and share information in connection with our Services. By using our Services, you acknowledge that you have read and understood this Privacy Policy.
+- Reminders+ has no user accounts, no advertising and no tracking or analytics SDKs. The app's privacy manifest declares that no data is collected.
+- Your tasks, projects, routines and settings are stored on your device.
+- We, the operators of Reminders+, do not run servers that receive your app data.
+- Optional features that involve Apple services (iCloud Sync, App Store purchases) are processed by Apple under Apple's privacy policy.
+- This website uses Vercel for hosting and privacy-friendly, cookie-free Vercel Web Analytics.
 
-**We reserve the right to modify this Privacy Policy at any time.** Changes will be effective immediately upon posting. Your continued use of the Services after any changes constitutes acceptance of the modified policy.
+## 2. Controller
 
-## 2. Data Controller
+The controller responsible for data processing within the meaning of the EU General Data Protection Regulation (GDPR) is the operator named in our [Impressum](/impressum). You can reach us at the email address listed there or via our [Contact page](/contact).
 
-For users in the European Economic Area (EEA), the data controller is Reminders+. Contact information is available in our [Impressum](/impressum).
+## 3. The Reminders+ App
 
-## 3. Information We May Collect
+### 3.1 Data stored on your device
 
-We may collect various types of information in connection with the Services, including but not limited to:
+Everything you create in the app (tasks, notes, projects, routines, streaks, settings) is stored locally on your device. This data is not transmitted to us. It is deleted when you delete the app, unless you have enabled iCloud Sync or created a backup yourself.
 
-### 3.1 Information You Provide
+### 3.2 iCloud Sync (optional, Plus)
 
-- Account information (if we implement accounts in the future)
-- Content you create within the App (tasks, routines, settings)
-- Communications with us (support requests, feedback)
-- Any other information you choose to provide
+If you enable iCloud Sync, your tasks and projects are synced across your Apple devices through your own iCloud account using Apple CloudKit. The data is stored in your private iCloud database, which we as developers cannot access. If CloudKit is temporarily unavailable, the app falls back to Apple's iCloud key-value storage in your account. Apple is responsible for this processing; see [Apple's Privacy Policy](https://www.apple.com/legal/privacy/). You can turn sync off at any time in the app settings.
 
-### 3.2 Information Collected Automatically
+### 3.3 AI Assist (optional, Plus)
 
-We may automatically collect certain information when you use our Services, including:
+AI Assist uses Apple's on-device Foundation Models (Apple Intelligence). Your requests and the tasks Assist works with are processed on your device and are not sent to us or to any third-party AI provider.
 
-- Device information (device type, operating system, unique device identifiers)
-- Usage data (features used, time spent, actions taken)
-- Log data (access times, pages viewed, app crashes, other system activity)
-- Location information (with your consent, where required by law)
-- Analytics data through third-party analytics tools
-- Advertising identifiers (IDFA) if applicable
+### 3.4 Permissions
 
-### 3.3 Information from Third Parties
+The app only asks for these permissions when you use the related feature. You can change them at any time in iOS Settings.
 
-We may receive information about you from third parties, including business partners, marketing partners, social media platforms, and data providers.
+- **Calendars and Reminders:** to import events from Apple Calendar and reminders from Apple Reminders into your tasks. Imported items are stored locally like any other task.
+- **Location (while using the app):** to suggest your current place when you add a location to a task. The location is stored only with that task on your device.
+- **Notifications:** to remind you of due tasks and, if you turn it on, to send a daily summary. Notifications are scheduled locally on your device. The app badge count is also calculated on your device.
 
-### 3.4 Current Data Practices
+### 3.5 Widgets and app icon
 
-As of the date of this policy, the App primarily stores data locally on your device. However, we reserve the right to implement additional data collection, cloud synchronization, analytics, or other features at any time. We will update this policy accordingly when such features are implemented.
+Home Screen and Lock Screen widgets read your streak and today's tasks from a shared storage area on your device. If you choose an app icon in your accent color, iOS switches the icon locally. No data leaves your device for this.
 
-## 4. How We May Use Your Information
+### 3.6 Purchases
 
-We may use the information we collect for various purposes, including:
+The Plus upgrade (monthly subscription or lifetime purchase) is sold through Apple's App Store. Payment is handled entirely by Apple; we do not receive your payment details. The app only checks with the App Store whether a purchase is active. See [Apple's Privacy Policy](https://www.apple.com/legal/privacy/).
 
-- Providing, maintaining, and improving our Services
-- Developing new features, products, and services
-- Processing transactions and sending related information
-- Sending promotional communications (with your consent where required)
-- Responding to your comments, questions, and requests
-- Monitoring and analyzing trends, usage, and activities
-- Detecting, investigating, and preventing fraudulent or unauthorized activity
-- Personalizing and improving your experience
-- Carrying out any other purpose described to you at the time of collection
+### 3.7 Data export, backup and restore
 
-## 5. Legal Basis for Processing (GDPR)
+You can export all your tasks, projects and settings as a JSON file from the app settings at any time, free of charge. With Plus you can also restore a backup file you pick from your device. Where you store or share these files is up to you; we do not receive them.
 
-If you are in the EEA, we process your personal data based on the following legal grounds:
+### 3.8 Crash reports
 
-- **Consent:** Where you have given consent for specific processing activities
-- **Contract:** Where processing is necessary to perform our contract with you
-- **Legal Obligation:** Where processing is necessary to comply with legal requirements
-- **Legitimate Interests:** Where processing is necessary for our legitimate interests and does not override your rights
+If you have agreed to share analytics with app developers in iOS Settings, Apple may provide us with anonymized crash reports and usage statistics through App Store Connect. You can change this under Settings › Privacy & Security › Analytics & Improvements.
 
-## 6. Sharing of Information
+## 4. This Website
 
-We may share your information in the following circumstances:
+### 4.1 Hosting
 
-- **Service Providers:** With vendors, consultants, and service providers who need access to perform services on our behalf
-- **Business Transfers:** In connection with any merger, sale, acquisition, or transfer of assets
-- **Legal Requirements:** If required by law, regulation, legal process, or governmental request
-- **Protection:** To protect the rights, privacy, safety, or property of ourselves or others
-- **With Consent:** With your consent or at your direction
-- **Aggregated Data:** We may share aggregated or anonymized information that cannot reasonably identify you
+This website is hosted by Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA. When you visit the website, Vercel processes technical data needed to deliver it, such as your IP address, date and time of the request, the page requested, and browser and operating system information, in server logs. The legal basis is our legitimate interest in providing a secure and reliable website (Art. 6(1)(f) GDPR). Vercel may process data in the USA; Vercel is certified under the EU-U.S. Data Privacy Framework and offers Standard Contractual Clauses.
 
-## 7. Third-Party Services
+### 4.2 Vercel Web Analytics
 
-Our Services may contain links to third-party websites or services, or integrate with third-party platforms including but not limited to:
+We use Vercel Web Analytics to understand how many people visit which pages. It does not use cookies and does not store data that identifies you across sites or over time; visits are counted in aggregated form. The legal basis is our legitimate interest in improving the website (Art. 6(1)(f) GDPR).
 
-- Apple App Store and related Apple services
-- Analytics providers (e.g., Firebase, Amplitude, Mixpanel)
-- Advertising networks
-- Cloud storage providers
-- Customer support tools
+### 4.3 Contacting us
 
-These third parties have their own privacy policies. We are not responsible for their privacy practices and encourage you to review their policies.
+If you email us, we use your email address and message only to answer your request. The legal basis is Art. 6(1)(b) or (f) GDPR. We delete the correspondence once it is no longer needed, unless we are legally required to keep it.
 
-## 8. Data Retention
+### 4.4 Links to the App Store
 
-We retain information for as long as necessary for the purposes described in this policy, or as required by law. This may include retaining information after you stop using our Services. Locally stored data on your device is deleted when you uninstall the App.
+Links on this website lead to Apple's App Store. Once you follow such a link, Apple's privacy policy applies.
 
-## 9. International Data Transfers
+## 5. Children
 
-Your information may be transferred to, stored, and processed in countries other than your own. By using our Services, you consent to the transfer of your information to countries that may have different data protection laws than your country of residence.
+Reminders+ is not directed to children under 13. Because we do not collect personal data in the app, we do not knowingly collect data from children.
 
-## 10. Data Security
+## 6. Your Rights
 
-We implement reasonable technical and organizational measures to protect your information. However, no method of transmission or storage is completely secure, and we cannot guarantee absolute security. You are responsible for maintaining the security of your device.
+Under the GDPR you have the right to access (Art. 15), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20) and to object to processing based on legitimate interests (Art. 21). You also have the right to lodge a complaint with a data protection supervisory authority.
 
-## 11. Children's Privacy
+Because app data stays on your device or in your own iCloud account, you can view, export and delete it yourself in the app at any time. For anything else, contact us using the details in our [Impressum](/impressum).
 
-Our Services are not directed to children under 13 (or other age as required by local law). We do not knowingly collect personal information from children. If we learn that we have collected personal information from a child, we will take steps to delete it.
+## 7. Changes to This Policy
 
-## 12. Your Rights and Choices
-
-Depending on your location, you may have certain rights regarding your personal information:
-
-### EEA Residents (GDPR)
-
-- Right of access to your personal data
-- Right to rectification of inaccurate data
-- Right to erasure ("right to be forgotten")
-- Right to restriction of processing
-- Right to data portability
-- Right to object to processing
-- Right to withdraw consent
-- Right to lodge a complaint with a supervisory authority
-
-### California Residents (CCPA/CPRA)
-
-- Right to know what personal information is collected, used, shared, or sold
-- Right to delete personal information
-- Right to opt-out of the sale or sharing of personal information
-- Right to limit use of sensitive personal information
-- Right to non-discrimination for exercising your rights
-
-To exercise these rights, please contact us using the information in our [Contact page](/contact). We may verify your identity before processing your request.
-
-## 13. Do Not Track
-
-Some browsers have a "Do Not Track" feature. We may or may not respond to Do Not Track signals.
-
-## 14. Changes to This Policy
-
-We may update this Privacy Policy at any time. Changes are effective immediately upon posting. We encourage you to review this policy periodically. Your continued use of the Services after changes indicates acceptance of the updated policy.
-
-## 15. Contact Us
-
-If you have questions about this Privacy Policy, please contact us via our [Contact page](/contact) or the information in our [Impressum](/impressum).
+We update this policy when the app or website changes in a way that affects your data. The date at the top shows the latest version.
