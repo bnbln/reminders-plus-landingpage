@@ -11,18 +11,18 @@ const steps = [
 
 export default function CTASection() {
     return (
-        <section className="py-20 px-5" id="download">
+        <section className="py-20 px-5" id="download" aria-labelledby="download-title">
             <div className="max-w-5xl mx-auto">
                 <div className="panel overflow-hidden">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {/* Left Side - Phone Screenshot */}
                         <div className="relative bg-ios-bg p-8 flex items-center justify-center min-h-[500px] overflow-hidden">
-                            <div className="absolute inset-0 accent-wash pointer-events-none" />
+                            <div aria-hidden="true" className="absolute inset-0 accent-wash pointer-events-none" />
                             <div className="relative w-56 md:w-64 shadow-2xl rounded-[2.25rem] overflow-hidden ring-1 ring-black/5">
                                 <div className="aspect-[9/19] relative">
                                     <Image
                                         src="/screens/IMG_3085.PNG"
-                                        alt="Reminders+ Streaks"
+                                        alt="Reminders+ on iPhone: the Streaks screen"
                                         fill
                                         className="object-cover"
                                     />
@@ -36,28 +36,28 @@ export default function CTASection() {
                             <div className="flex items-center gap-4 mb-8">
                                 <Image
                                     src="/app-icon.png"
-                                    alt="Reminders+ App Icon"
+                                    alt=""
                                     width={80}
                                     height={80}
                                     className="rounded-[18px] shadow-lg"
                                 />
                                 <div>
-                                    <span className="text-2xl font-bold tracking-tight block">Reminders+</span>
+                                    <h2 id="download-title" className="text-2xl font-bold tracking-tight">Reminders+</h2>
                                     <p className="text-label-secondary">Tasks &amp; Habits</p>
                                 </div>
                             </div>
 
                             {/* Steps */}
-                            <div className="space-y-4 mb-8">
+                            <ol role="list" className="space-y-4 mb-8" aria-label="Get started in three steps">
                                 {steps.map((step) => (
-                                    <div key={step.number} className="flex items-center gap-4">
-                                        <div className="w-8 h-8 rounded-full bg-accent/10 text-accent flex items-center justify-center text-sm font-bold">
+                                    <li key={step.number} className="flex items-center gap-4">
+                                        <div aria-hidden="true" className="w-8 h-8 rounded-full bg-accent/10 text-accent flex items-center justify-center text-sm font-bold">
                                             {step.number}
                                         </div>
                                         <span className="text-[17px] font-medium">{step.text}</span>
-                                    </div>
+                                    </li>
                                 ))}
-                            </div>
+                            </ol>
 
                             {/* Download Button */}
                             <a
@@ -69,13 +69,13 @@ export default function CTASection() {
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
                                     src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/white/en-us?releaseDate=1770163200"
-                                    alt="Download on the App Store"
+                                    alt="Download on the App Store (opens in a new tab)"
                                     style={{ width: '200px', height: '67px', verticalAlign: 'middle', objectFit: 'contain' }}
                                 />
                             </a>
 
                             <p className="text-label-secondary text-sm mt-4 text-center md:text-left">
-                                Free download • No account required
+                                Free download <span aria-hidden="true">•</span> No account required
                             </p>
                         </div>
                     </div>

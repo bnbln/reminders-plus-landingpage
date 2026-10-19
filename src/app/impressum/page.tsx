@@ -35,9 +35,9 @@ const components = {
     ),
     a: ({ href, children }: { href?: string; children?: React.ReactNode }) => {
         if (href?.startsWith('/')) {
-            return <Link href={href} className="text-accent hover:underline">{children}</Link>;
+            return <Link href={href} className="text-accent underline underline-offset-2 hover:no-underline">{children}</Link>;
         }
-        return <a href={href} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">{children}</a>;
+        return <a href={href} target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2 hover:no-underline">{children}<span className="sr-only"> (opens in a new tab)</span></a>;
     },
     hr: () => <hr className="my-8 border-separator" />,
 };
@@ -49,7 +49,7 @@ export default async function Impressum() {
     return (
         <>
             <Header />
-            <main className="min-h-screen pt-24">
+            <main id="main" className="min-h-screen pt-24">
                 <article className="max-w-4xl mx-auto px-6 py-16">
                     <div className="panel p-6 md:p-12 space-y-2">
                         <ReactMarkdown components={components}>
