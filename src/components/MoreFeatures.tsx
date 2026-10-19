@@ -1,11 +1,12 @@
-import { APP_LANGUAGE_COUNT } from '@/lib/app-info';
 import { tint } from '@/lib/tint';
+import { fill } from '@/i18n/format';
+import type { Dictionary } from '@/i18n/types';
 
-const features = [
+const features = (t: Dictionary['moreFeatures']) => [
     {
-        title: 'Widgets',
+        title: t.widgetsTitle,
         color: 'var(--accent)',
-        text: 'Your streak and today\'s tasks on the Home Screen and Lock Screen. Check tasks off without opening the app.',
+        text: t.widgetsText,
         icon: (
             <>
                 <rect x="3" y="3" width="7" height="7" rx="1.5" />
@@ -16,9 +17,9 @@ const features = [
         ),
     },
     {
-        title: 'AI Assist',
+        title: t.assistTitle,
         color: 'var(--green)',
-        text: 'Create, find and move tasks in plain language. Runs on Apple Intelligence, right on your device.',
+        text: t.assistText,
         plus: true,
         icon: (
             <>
@@ -28,16 +29,16 @@ const features = [
         ),
     },
     {
-        title: 'iCloud Sync',
+        title: t.syncTitle,
         color: '#F59E0B',
-        text: 'Keep tasks and projects in sync across your iPhone and iPad through your own iCloud account.',
+        text: t.syncText,
         plus: true,
         icon: <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />,
     },
     {
-        title: 'Import from Apple',
+        title: t.importTitle,
         color: 'var(--red)',
-        text: 'Bring in reminders from Apple Reminders and events from Apple Calendar as tasks.',
+        text: t.importText,
         icon: (
             <>
                 <rect x="3" y="4" width="18" height="17" rx="2" />
@@ -46,9 +47,9 @@ const features = [
         ),
     },
     {
-        title: 'Make it yours',
+        title: t.themeTitle,
         color: 'var(--indigo)',
-        text: 'Light and dark mode, accent colors, and an app icon that takes on your color.',
+        text: t.themeText,
         icon: (
             <>
                 <circle cx="12" cy="12" r="9" />
@@ -57,9 +58,9 @@ const features = [
         ),
     },
     {
-        title: `${APP_LANGUAGE_COUNT} languages`,
+        title: fill(t.languagesTitle),
         color: 'var(--teal)',
-        text: 'Use Reminders+ in English, German, Spanish, French, Japanese, Chinese, Arabic and many more.',
+        text: t.languagesText,
         icon: (
             <>
                 <circle cx="12" cy="12" r="9" />
@@ -69,22 +70,22 @@ const features = [
     },
 ];
 
-export default function MoreFeatures() {
+export default function MoreFeatures({ t }: { t: Dictionary['moreFeatures'] }) {
     return (
         <section className="py-20 px-5" id="more-features">
             <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="large-title text-4xl md:text-6xl mb-4">
-                        Everything you need,<br />
-                        nothing you don&apos;t.
+                        {t.titleLine1}<br />
+                        {t.titleLine2}
                     </h2>
                     <p className="text-lg text-label-secondary">
-                        Free to use. Upgrade to Plus for AI Assist, more than 4 projects and iCloud Sync.
+                        {t.subtitle}
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                    {features.map((feature) => (
+                    {features(t).map((feature) => (
                         <div key={feature.title} className="panel p-6">
                             <div className="flex items-center justify-between mb-6">
                                 <div className="icon-tile w-11 h-11 !rounded-[12px]" style={tint(feature.color)}>
@@ -94,7 +95,7 @@ export default function MoreFeatures() {
                                 </div>
                                 {feature.plus && (
                                     <span className="text-xs font-semibold text-accent bg-accent/10 rounded-full px-3 py-1">
-                                        Plus
+                                        {t.plusBadge}
                                     </span>
                                 )}
                             </div>

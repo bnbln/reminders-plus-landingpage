@@ -1,28 +1,26 @@
 'use client';
 
 import { useState } from 'react';
-
-interface FAQItem {
-    question: string;
-    answer: string;
-}
+import type { Dictionary } from '@/i18n/types';
 
 interface FAQProps {
-    faqItems: FAQItem[];
+    // Answers arrive with their {placeholders} already filled in.
+    t: Dictionary['faq'];
 }
 
-export default function FAQ({ faqItems }: FAQProps) {
+export default function FAQ({ t }: FAQProps) {
+    const faqItems = t.items;
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
         <section className="py-20 px-5" id="faq">
             <div className="max-w-3xl mx-auto">
                 <h2 className="large-title text-4xl md:text-6xl text-center mb-4">
-                    Got questions?<br />
-                    Here are the answers.
+                    {t.titleLine1}<br />
+                    {t.titleLine2}
                 </h2>
                 <p className="text-lg text-label-secondary text-center mb-12">
-                    Everything you need to know about Reminders+.
+                    {t.subtitle}
                 </p>
 
                 {/* One grouped list, like a settings section in the app */}
@@ -33,13 +31,13 @@ export default function FAQ({ faqItems }: FAQProps) {
                             <div key={index}>
                                 {index > 0 && <div className="h-px bg-separator mx-5" />}
                                 <button
-                                    className="w-full text-left flex items-center justify-between gap-4 px-5 py-4 cursor-pointer"
+                                    className="w-full text-start flex items-center justify-between gap-4 px-5 py-4 cursor-pointer"
                                     aria-expanded={isOpen}
                                     onClick={() => setOpenIndex(isOpen ? null : index)}
                                 >
                                     <span className="text-[17px] font-semibold">{item.question}</span>
                                     <svg
-                                        className={`w-4 h-4 shrink-0 text-label-tertiary transition-transform ${isOpen ? 'rotate-90' : ''}`}
+                                        className={`w-4 h-4 shrink-0 text-label-tertiary transition-transform rtl:-scale-x-100 ${isOpen ? 'rotate-90' : ''}`}
                                         aria-hidden="true"
                                         viewBox="0 0 24 24"
                                         fill="none"
