@@ -184,11 +184,14 @@ body {
   transform: scale(0.97);
 }
 
-/* Liquid-glass bar */
+/* Liquid-glass surface: translucent fill, inner highlight and hairline.
+   The blur comes from Tailwind's backdrop-blur utilities, because the CSS
+   build drops a hand-written unprefixed backdrop-filter. */
 .glass {
   background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    0 8px 32px rgba(0, 0, 0, 0.06);
 }
 
 /* Soft accent wash behind the hero, like the Plus card */
