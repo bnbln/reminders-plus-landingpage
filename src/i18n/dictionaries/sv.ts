@@ -143,7 +143,6 @@ const sv: Dictionary = {
         step3: 'Starta din svit!',
         appSubtitle: 'Uppgifter & vanor',
         appIconAlt: 'Reminders+ appsymbol',
-        screenAlt: 'Reminders+ vyn Sviter',
         badgeAlt: 'Hämta i App Store',
         note: 'Gratis nedladdning · Inget konto krävs',
     },

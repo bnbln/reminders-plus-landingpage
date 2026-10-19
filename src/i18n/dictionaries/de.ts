@@ -143,7 +143,6 @@ const de: Dictionary = {
         step3: 'Streak starten!',
         appSubtitle: 'Aufgaben & Gewohnheiten',
         appIconAlt: 'Reminders+ App-Icon',
-        screenAlt: 'Reminders+ Streak-Ansicht',
         badgeAlt: 'Laden im App Store',
         note: 'Kostenlos laden · Kein Konto nötig',
     },

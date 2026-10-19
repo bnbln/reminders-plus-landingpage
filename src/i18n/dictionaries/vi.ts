@@ -143,7 +143,6 @@ const vi: Dictionary = {
         step3: 'Bắt đầu chuỗi ngày!',
         appSubtitle: 'Nhiệm vụ & Thói quen',
         appIconAlt: 'Biểu tượng ứng dụng Reminders+',
-        screenAlt: 'Màn hình Chuỗi ngày của Reminders+',
         badgeAlt: 'Tải về trên App Store',
         note: 'Tải miễn phí · Không cần tài khoản',
     },

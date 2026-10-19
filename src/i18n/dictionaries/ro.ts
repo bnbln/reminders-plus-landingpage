@@ -143,7 +143,6 @@ const ro: Dictionary = {
         step3: 'Începe-ți seria!',
         appSubtitle: 'Sarcini și obiceiuri',
         appIconAlt: 'Pictograma aplicației Reminders+',
-        screenAlt: 'Ecranul Serii din Reminders+',
         badgeAlt: 'Descarcă din App Store',
         note: 'Descărcare gratuită · Fără cont',
     },

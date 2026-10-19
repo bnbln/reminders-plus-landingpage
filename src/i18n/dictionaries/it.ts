@@ -143,7 +143,6 @@ const it: Dictionary = {
         step3: 'Inizia la tua serie!',
         appSubtitle: 'Attività e abitudini',
         appIconAlt: 'Icona dell\'app Reminders+',
-        screenAlt: 'Schermata Serie di Reminders+',
         badgeAlt: 'Scarica su App Store',
         note: 'Download gratuito · Nessun account richiesto',
     },

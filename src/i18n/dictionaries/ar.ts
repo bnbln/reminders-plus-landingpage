@@ -143,7 +143,6 @@ const ar: Dictionary = {
         step3: 'ابدأ سلسلتك!',
         appSubtitle: 'المهام والعادات',
         appIconAlt: 'أيقونة تطبيق Reminders+',
-        screenAlt: 'شاشة السلاسل في Reminders+',
         badgeAlt: 'حمّله من App Store',
         note: 'تنزيل مجاني · لا حاجة إلى حساب',
     },

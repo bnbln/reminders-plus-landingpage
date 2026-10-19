@@ -143,7 +143,6 @@ const da: Dictionary = {
         step3: 'Start din serie!',
         appSubtitle: 'Opgaver & vaner',
         appIconAlt: 'Reminders+ appsymbol',
-        screenAlt: 'Reminders+ skærmen Serier',
         badgeAlt: 'Hent i App Store',
         note: 'Gratis download · Ingen konto påkrævet',
     },

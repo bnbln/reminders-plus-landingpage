@@ -143,7 +143,6 @@ const nl: Dictionary = {
         step3: 'Start je reeks!',
         appSubtitle: 'Taken & gewoontes',
         appIconAlt: 'Reminders+ app-icoon',
-        screenAlt: 'Reminders+ reeksenscherm',
         badgeAlt: 'Download in de App Store',
         note: 'Gratis downloaden · Geen account nodig',
     },

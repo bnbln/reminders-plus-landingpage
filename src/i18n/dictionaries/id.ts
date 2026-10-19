@@ -143,7 +143,6 @@ const id: Dictionary = {
         step3: 'Mulai streak kamu!',
         appSubtitle: 'Tugas & Kebiasaan',
         appIconAlt: 'Ikon aplikasi Reminders+',
-        screenAlt: 'Layar Streak Reminders+',
         badgeAlt: 'Unduh di App Store',
         note: 'Unduh gratis · Tidak perlu akun',
     },

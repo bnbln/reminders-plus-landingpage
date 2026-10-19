@@ -143,7 +143,6 @@ const pt: Dictionary = {
         step3: 'Comece sua sequência!',
         appSubtitle: 'Tarefas e hábitos',
         appIconAlt: 'Ícone do app Reminders+',
-        screenAlt: 'Tela de sequências do Reminders+',
         badgeAlt: 'Baixar na App Store',
         note: 'Download grátis · Sem necessidade de conta',
     },

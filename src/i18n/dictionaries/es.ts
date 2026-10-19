@@ -143,7 +143,6 @@ const es: Dictionary = {
         step3: '¡Empieza tu racha!',
         appSubtitle: 'Tareas y hábitos',
         appIconAlt: 'Icono de la app Reminders+',
-        screenAlt: 'Pantalla de rachas de Reminders+',
         badgeAlt: 'Descárgalo en el App Store',
         note: 'Descarga gratuita · Sin necesidad de cuenta',
     },

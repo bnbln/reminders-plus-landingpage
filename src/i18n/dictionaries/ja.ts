@@ -143,7 +143,6 @@ const ja: Dictionary = {
         step3: '連続記録をスタート！',
         appSubtitle: 'タスク＆習慣',
         appIconAlt: 'Reminders+ アプリアイコン',
-        screenAlt: 'Reminders+ の連続記録画面',
         badgeAlt: 'App Store からダウンロード',
         note: '無料ダウンロード · アカウント不要',
     },

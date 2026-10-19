@@ -143,7 +143,6 @@ const pl: Dictionary = {
         step3: 'Zacznij swoją passę!',
         appSubtitle: 'Zadania i nawyki',
         appIconAlt: 'Ikona aplikacji Reminders+',
-        screenAlt: 'Ekran Passy w Reminders+',
         badgeAlt: 'Pobierz w App Store',
         note: 'Darmowe pobieranie · Konto nie jest wymagane',
     },

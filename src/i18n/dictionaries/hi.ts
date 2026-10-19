@@ -143,7 +143,6 @@ const hi: Dictionary = {
         step3: 'अपनी स्ट्रीक शुरू करें!',
         appSubtitle: 'कार्य और आदतें',
         appIconAlt: 'Reminders+ ऐप आइकन',
-        screenAlt: 'Reminders+ स्ट्रीक स्क्रीन',
         badgeAlt: 'App Store से डाउनलोड करें',
         note: 'मुफ़्त डाउनलोड · किसी अकाउंट की ज़रूरत नहीं',
     },

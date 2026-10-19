@@ -146,7 +146,6 @@ const en = {
         step3: 'Start your streak!',
         appSubtitle: 'Tasks & Habits',
         appIconAlt: 'Reminders+ app icon',
-        screenAlt: 'Reminders+ Streaks screen',
         badgeAlt: 'Download on the App Store',
         note: 'Free download · No account required',
     },

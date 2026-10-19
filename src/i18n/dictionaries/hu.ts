@@ -143,7 +143,6 @@ const hu: Dictionary = {
         step3: 'Kezdd el a sorozatod!',
         appSubtitle: 'Feladatok és szokások',
         appIconAlt: 'Reminders+ appikon',
-        screenAlt: 'A Reminders+ Sorozatok képernyője',
         badgeAlt: 'Letöltés az App Store-ból',
         note: 'Ingyenes letöltés · Nem kell fiók',
     },

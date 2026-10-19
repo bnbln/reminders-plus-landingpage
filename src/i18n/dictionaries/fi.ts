@@ -143,7 +143,6 @@ const fi: Dictionary = {
         step3: 'Aloita putkesi!',
         appSubtitle: 'Tehtävät & tavat',
         appIconAlt: 'Reminders+ -sovelluskuvake',
-        screenAlt: 'Reminders+:n Putket-näkymä',
         badgeAlt: 'Lataa App Storesta',
         note: 'Ilmainen lataus · Tiliä ei tarvita',
     },

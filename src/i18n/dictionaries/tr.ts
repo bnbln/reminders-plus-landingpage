@@ -143,7 +143,6 @@ const tr: Dictionary = {
         step3: 'Serine başla!',
         appSubtitle: 'Görevler ve Alışkanlıklar',
         appIconAlt: 'Reminders+ uygulama simgesi',
-        screenAlt: 'Reminders+ Seriler ekranı',
         badgeAlt: 'App Store\'dan indirin',
         note: 'Ücretsiz indir · Hesap gerekmez',
     },

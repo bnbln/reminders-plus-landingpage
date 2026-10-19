@@ -143,7 +143,6 @@ const el: Dictionary = {
         step3: 'Ξεκίνα το σερί σου!',
         appSubtitle: 'Εργασίες και συνήθειες',
         appIconAlt: 'Εικονίδιο εφαρμογής Reminders+',
-        screenAlt: 'Οθόνη Σερί του Reminders+',
         badgeAlt: 'Λήψη από το App Store',
         note: 'Δωρεάν λήψη · Χωρίς λογαριασμό',
     },

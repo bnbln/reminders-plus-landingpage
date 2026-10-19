@@ -143,7 +143,6 @@ const fr: Dictionary = {
         step3: 'Lance ta série !',
         appSubtitle: 'Tâches et habitudes',
         appIconAlt: 'Icône de l\'app Reminders+',
-        screenAlt: 'Écran Séries de Reminders+',
         badgeAlt: 'Télécharger dans l\'App Store',
         note: 'Téléchargement gratuit · Aucun compte requis',
     },

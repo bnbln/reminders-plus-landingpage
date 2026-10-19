@@ -143,7 +143,6 @@ const zh: Dictionary = {
         step3: '开启你的连续记录！',
         appSubtitle: '任务与习惯',
         appIconAlt: 'Reminders+ 应用图标',
-        screenAlt: 'Reminders+ 连续记录界面',
         badgeAlt: '在 App Store 下载',
         note: '免费下载 · 无需注册账户',
     },

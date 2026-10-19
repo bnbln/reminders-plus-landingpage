@@ -143,7 +143,6 @@ const cs: Dictionary = {
         step3: 'Začněte svou sérii!',
         appSubtitle: 'Úkoly a návyky',
         appIconAlt: 'Ikona aplikace Reminders+',
-        screenAlt: 'Obrazovka Série v Reminders+',
         badgeAlt: 'Stáhnout v App Store',
         note: 'Stažení zdarma · Bez nutnosti účtu',
     },

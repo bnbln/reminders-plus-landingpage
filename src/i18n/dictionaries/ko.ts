@@ -143,7 +143,6 @@ const ko: Dictionary = {
         step3: '연속 기록 시작!',
         appSubtitle: '작업 및 습관',
         appIconAlt: 'Reminders+ 앱 아이콘',
-        screenAlt: 'Reminders+ 연속 기록 화면',
         badgeAlt: 'App Store에서 다운로드',
         note: '무료 다운로드 · 계정 필요 없음',
     },

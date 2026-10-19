@@ -143,7 +143,6 @@ const uk: Dictionary = {
         step3: 'Почни свою серію!',
         appSubtitle: 'Завдання й звички',
         appIconAlt: 'Іконка застосунку Reminders+',
-        screenAlt: 'Екран «Серії» в Reminders+',
         badgeAlt: 'Завантажте в App Store',
         note: 'Безкоштовно · Без облікового запису',
     },

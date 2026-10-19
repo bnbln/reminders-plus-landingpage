@@ -20,36 +20,23 @@ export default function CTASection({ t, locale }: { t: Dictionary['cta']; locale
             <div className="max-w-5xl mx-auto">
                 <div className="panel overflow-hidden">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        {/* Left Side - Phone Screenshot */}
-                        <div className="relative bg-ios-bg p-8 flex items-center justify-center min-h-[500px] overflow-hidden">
-                            <div className="absolute inset-0 accent-wash pointer-events-none" />
-                            <div className="relative w-56 md:w-64 shadow-2xl rounded-[2.25rem] overflow-hidden ring-1 ring-black/5">
-                                <div className="aspect-[9/19] relative">
-                                    <Image
-                                        src="/screens/IMG_3085.PNG"
-                                        alt={t.screenAlt}
-                                        fill
-                                        className="object-cover"
-                                    />
-                                </div>
-                            </div>
+                        {/* Left Side - Brand artwork */}
+                        <div className="relative min-h-[320px] sm:min-h-[420px] lg:min-h-[500px] bg-accent">
+                            <Image
+                                src="/brand/icon-orbit.webp"
+                                alt={t.appIconAlt}
+                                fill
+                                sizes="(min-width: 1024px) 512px, 100vw"
+                                className="object-cover"
+                            />
                         </div>
 
                         {/* Right Side - Download CTA */}
                         <div className="p-8 lg:p-12 flex flex-col justify-center">
-                            {/* App Icon & Name */}
-                            <div className="flex items-center gap-4 mb-8">
-                                <Image
-                                    src="/app-icon.png"
-                                    alt={t.appIconAlt}
-                                    width={80}
-                                    height={80}
-                                    className="rounded-[18px] shadow-lg"
-                                />
-                                <div>
-                                    <span dir="ltr" className="text-2xl font-bold tracking-tight block">Reminders+</span>
-                                    <p className="text-label-secondary">{t.appSubtitle}</p>
-                                </div>
+                            {/* App Name */}
+                            <div className="mb-8">
+                                <span dir="ltr" className="text-2xl font-bold tracking-tight block">Reminders+</span>
+                                <p className="text-label-secondary">{t.appSubtitle}</p>
                             </div>
 
                             {/* Steps */}
