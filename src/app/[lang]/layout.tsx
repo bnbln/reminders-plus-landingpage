@@ -34,6 +34,9 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
   return (
     <html lang={localeInfo[lang].htmlLang} dir={rtlLocales.includes(lang) ? "rtl" : "ltr"}>
       <body className="antialiased">
+        <a href="#main" className="skip-link">
+          {getDictionary(lang).a11y.skipToContent}
+        </a>
         {children}
         <Analytics />
       </body>

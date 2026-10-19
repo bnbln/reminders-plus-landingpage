@@ -61,7 +61,6 @@ export default function LanguagePicker({ locale, label }: LanguagePickerProps) {
             <button
                 ref={buttonRef}
                 type="button"
-                aria-label={`${label}: ${localeInfo[locale].name}`}
                 aria-expanded={open}
                 aria-controls={listId}
                 onClick={() => setOpen((value) => !value)}
@@ -71,7 +70,8 @@ export default function LanguagePicker({ locale, label }: LanguagePickerProps) {
                     <circle cx="12" cy="12" r="9" />
                     <path d="M3 12h18M12 3a14 14 0 0 1 3.5 9 14 14 0 0 1-3.5 9 14 14 0 0 1-3.5-9A14 14 0 0 1 12 3z" />
                 </svg>
-                <span className="text-[13px] font-semibold uppercase tracking-wide" aria-hidden="true">{locale}</span>
+                <span className="sr-only">{label}: {localeInfo[locale].name}, </span>
+                <span className="text-[13px] font-semibold uppercase tracking-wide">{locale}</span>
             </button>
 
             <div

@@ -35,17 +35,19 @@ export default async function Home({ params }: PageProps<'/[lang]'>) {
     };
 
     return (
-        <main className="min-h-screen">
+        <>
             <Header locale={locale} dict={dict} />
-            <Hero t={dict.hero} />
-            <FeatureIcons t={dict.featureIcons} />
-            <FeatureCards t={dict.featureCards} locale={locale} />
-            <MoreFeatures t={dict.moreFeatures} />
-            <PlusSection t={dict.plus} />
-            <Testimonials t={dict.testimonials} />
-            <FAQ t={faq} />
-            <CTASection t={dict.cta} locale={locale} />
+            <main id="main" className="min-h-screen">
+                <Hero t={dict.hero} a11y={dict.a11y} />
+                <FeatureIcons t={dict.featureIcons} a11y={dict.a11y} />
+                <FeatureCards t={dict.featureCards} a11y={dict.a11y} locale={locale} />
+                <MoreFeatures t={dict.moreFeatures} />
+                <PlusSection t={dict.plus} a11y={dict.a11y} />
+                <Testimonials t={dict.testimonials} a11y={dict.a11y} />
+                <FAQ t={faq} />
+                <CTASection t={dict.cta} a11y={dict.a11y} locale={locale} />
+            </main>
             <Footer locale={locale} dict={dict} />
-        </main>
+        </>
     );
 }

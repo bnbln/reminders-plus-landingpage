@@ -15,7 +15,7 @@ export const metadata = {
 };
 
 // Custom components for styled markdown rendering
-const components = (locale: Locale) => ({
+const components = (locale: Locale, newTab: string) => ({
     h1: ({ children }: { children?: React.ReactNode }) => (
         <h1 className="large-title text-4xl md:text-5xl mb-8">{children}</h1>
     ),
@@ -39,9 +39,9 @@ const components = (locale: Locale) => ({
     ),
     a: ({ href, children }: { href?: string; children?: React.ReactNode }) => {
         if (href?.startsWith('/')) {
-            return <Link href={`/${locale}${href}`} className="text-accent hover:underline">{children}</Link>;
+            return <Link href={`/${locale}${href}`} className="text-accent underline underline-offset-2 hover:no-underline">{children}</Link>;
         }
-        return <a href={href} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">{children}</a>;
+        return <a href={href} target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2 hover:no-underline">{children}<span className="sr-only"> {newTab}</span></a>;
     },
     hr: () => <hr className="my-8 border-separator" />,
 });
@@ -55,7 +55,7 @@ export default async function Impressum({ params }: PageProps<'/[lang]/impressum
     return (
         <>
             <Header locale={locale} dict={dict} />
-            <main className="min-h-screen pt-24">
+            <main id="main" className="min-h-screen pt-24">
                 <article className="max-w-4xl mx-auto px-6 py-16">
                     {dict.legal.originalOnly && (
                         <p lang={locale} className="tile px-5 py-3 mb-6 text-[15px] text-label-secondary">
@@ -63,7 +63,7 @@ export default async function Impressum({ params }: PageProps<'/[lang]/impressum
                         </p>
                     )}
                     <div lang="en" className="panel p-6 md:p-12 space-y-2">
-                        <ReactMarkdown components={components(locale)}>
+                        <ReactMarkdown components={components(locale, dict.a11y.newTab)}>
                             {content}
                         </ReactMarkdown>
                     </div>

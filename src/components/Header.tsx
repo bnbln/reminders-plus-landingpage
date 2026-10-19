@@ -22,11 +22,11 @@ export default function Header({ locale, dict }: HeaderProps) {
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 glass backdrop-blur-xl backdrop-saturate-[1.8] border-b border-separator">
-            <nav className="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
-                <Link href={`/${locale}`} className="flex items-center gap-2.5">
+            <nav aria-label={dict.a11y.mainNav} className="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+                <Link href={`/${locale}`} aria-label={dict.a11y.home} className="flex items-center gap-2.5">
                     <Image
                         src="/icon.png"
-                        alt={t.logoAlt}
+                        alt=""
                         width={28}
                         height={28}
                         className="rounded-[7px]"
@@ -34,17 +34,18 @@ export default function Header({ locale, dict }: HeaderProps) {
                     <span dir="ltr" className="font-bold text-[17px] tracking-tight">Reminders+</span>
                 </Link>
 
-                <div className="hidden md:flex items-center gap-8">
+                <ul role="list" className="hidden md:flex items-center gap-8">
                     {navLinks.map((link) => (
-                        <Link
-                            key={link.href}
-                            href={link.href}
-                            className="text-[15px] font-medium text-label-secondary hover:text-label transition-colors"
-                        >
-                            {link.label}
-                        </Link>
+                        <li key={link.href}>
+                            <Link
+                                href={link.href}
+                                className="text-[15px] font-medium text-label-secondary hover:text-label transition-colors"
+                            >
+                                {link.label}
+                            </Link>
+                        </li>
                     ))}
-                </div>
+                </ul>
 
                 <div className="flex items-center gap-1.5">
                     <LanguagePicker locale={locale} label={dict.language.label} />
@@ -55,6 +56,7 @@ export default function Header({ locale, dict }: HeaderProps) {
                         rel="noopener noreferrer"
                     >
                         {t.download}
+                        <span className="sr-only"> {dict.a11y.onAppStore} {dict.a11y.newTab}</span>
                     </Link>
                 </div>
             </nav>

@@ -183,6 +183,22 @@ const en = {
         // published in English. Empty for English itself.
         originalOnly: '',
     },
+    a11y: {
+        // Screen reader texts. Mostly invisible, except footerNote.
+        skipToContent: 'Skip to content',
+        mainNav: 'Main',
+        home: 'Reminders+ home',
+        onAppStore: 'on the App Store',
+        newTab: '(opens in a new tab)',
+        highlights: 'Highlights',
+        // {values}: the number of tasks completed on each day, comma separated.
+        activityChart: 'Activity over the last 14 days. Tasks completed per day: {values}.',
+        taskDone: 'done',
+        taskOpen: 'open',
+        rating: '5 out of 5 stars',
+        steps: 'Get started in three steps',
+        footerNote: 'Accessible website · built to WCAG 2.1 AA',
+    },
 };
 
 export default en;

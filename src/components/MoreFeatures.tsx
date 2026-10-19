@@ -72,10 +72,10 @@ const features = (t: Dictionary['moreFeatures']) => [
 
 export default function MoreFeatures({ t }: { t: Dictionary['moreFeatures'] }) {
     return (
-        <section className="py-20 px-5" id="more-features">
+        <section className="py-20 px-5" id="more-features" aria-labelledby="more-features-title">
             <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="large-title text-4xl md:text-6xl mb-4">
+                    <h2 id="more-features-title" className="large-title text-4xl md:text-6xl mb-4">
                         {t.titleLine1}<br />
                         {t.titleLine2}
                     </h2>
@@ -84,26 +84,29 @@ export default function MoreFeatures({ t }: { t: Dictionary['moreFeatures'] }) {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <ul role="list" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     {features(t).map((feature) => (
-                        <div key={feature.title} className="panel p-6">
+                        <li key={feature.title} className="panel p-6">
                             <div className="flex items-center justify-between mb-6">
-                                <div className="icon-tile w-11 h-11 !rounded-[12px]" style={tint(feature.color)}>
+                                <div aria-hidden="true" className="icon-tile w-11 h-11 !rounded-[12px]" style={tint(feature.color)}>
                                     <svg className="w-6 h-6" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                         {feature.icon}
                                     </svg>
                                 </div>
                                 {feature.plus && (
-                                    <span className="text-xs font-semibold text-accent bg-accent/10 rounded-full px-3 py-1">
+                                    <span aria-hidden="true" className="text-xs font-semibold text-accent bg-accent/10 rounded-full px-3 py-1">
                                         {t.plusBadge}
                                     </span>
                                 )}
                             </div>
-                            <h3 className="text-[19px] font-bold tracking-tight mb-1.5">{feature.title}</h3>
+                            <h3 className="text-[19px] font-bold tracking-tight mb-1.5">
+                                {feature.title}
+                                {feature.plus && <span className="sr-only"> ({t.plusBadge})</span>}
+                            </h3>
                             <p className="text-[15px] leading-snug text-label-secondary">{feature.text}</p>
-                        </div>
+                        </li>
                     ))}
-                </div>
+                </ul>
             </div>
         </section>
     );

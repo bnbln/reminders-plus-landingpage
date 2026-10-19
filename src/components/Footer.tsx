@@ -29,13 +29,13 @@ export default function Footer({ locale, dict }: { locale: Locale; dict: Diction
     const footerLinks = links(locale, dict);
 
     return (
-        <footer className="bg-black text-white pt-16 pb-8">
+        <footer className="on-dark bg-black text-white pt-16 pb-8">
             <div className="max-w-5xl mx-auto px-6">
                 {/* Links Section */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-                    <div>
-                        <h4 className="section-label !text-white/50 mb-4">{t.product}</h4>
-                        <ul className="space-y-2">
+                    <nav aria-label={t.product}>
+                        <h2 className="section-label !text-white/60 mb-4">{t.product}</h2>
+                        <ul role="list" className="space-y-2">
                             {footerLinks.product.map((link) => (
                                 <li key={link.label}>
                                     <Link href={link.href} className="text-white/80 hover:text-white text-[15px] transition-colors">
@@ -44,10 +44,10 @@ export default function Footer({ locale, dict }: { locale: Locale; dict: Diction
                                 </li>
                             ))}
                         </ul>
-                    </div>
-                    <div>
-                        <h4 className="section-label !text-white/50 mb-4">{t.legal}</h4>
-                        <ul className="space-y-2">
+                    </nav>
+                    <nav aria-label={t.legal}>
+                        <h2 className="section-label !text-white/60 mb-4">{t.legal}</h2>
+                        <ul role="list" className="space-y-2">
                             {footerLinks.legal.map((link) => (
                                 <li key={link.label}>
                                     <Link href={link.href} className="text-white/80 hover:text-white text-[15px] transition-colors">
@@ -56,10 +56,10 @@ export default function Footer({ locale, dict }: { locale: Locale; dict: Diction
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </nav>
                     {/* <div>
-                        <h4 className="section-label !text-white/50 mb-4">Social</h4>
-                        <ul className="space-y-2">
+                        <h2 className="section-label !text-white/60 mb-4">Social</h2>
+                        <ul role="list" className="space-y-2">
                             {footerLinks.social.map((link) => (
                                 <li key={link.label}>
                                     <Link href={link.href} className="text-white/80 hover:text-white text-[15px] transition-colors" target="_blank" rel="noopener noreferrer">
@@ -70,7 +70,7 @@ export default function Footer({ locale, dict }: { locale: Locale; dict: Diction
                         </ul>
                     </div> */}
                     <div>
-                        <h4 className="section-label !text-white/50 mb-4">{t.getStarted}</h4>
+                        <h2 className="section-label !text-white/60 mb-4">{t.getStarted}</h2>
                         <Link
                             href={APP_STORE_URL}
                             className="btn-primary text-[15px]"
@@ -78,13 +78,14 @@ export default function Footer({ locale, dict }: { locale: Locale; dict: Diction
                             rel="noopener noreferrer"
                         >
                             {dict.nav.download}
+                            <span className="sr-only"> {dict.a11y.onAppStore} {dict.a11y.newTab}</span>
                         </Link>
                     </div>
                 </div>
 
                 {/* Large Logo */}
                 <div className="border-t border-white/10 pt-12">
-                    <div className="w-full overflow-hidden px-4">
+                    <div className="w-full overflow-hidden px-4" aria-hidden="true">
                         <span
                             dir="ltr"
                             className="font-extrabold tracking-tighter text-white/20 block text-center whitespace-nowrap"
@@ -96,10 +97,13 @@ export default function Footer({ locale, dict }: { locale: Locale; dict: Diction
                 </div>
 
                 {/* Copyright */}
-                <div className="text-center mt-8 text-white/50 text-sm">
+                <div className="text-center mt-8 text-white/60 text-sm">
                     © {new Date().getFullYear()} Reminders+. {t.rights}
-                    <div className="mt-2 text-white/35 text-xs">
+                    <div className="mt-2 text-white/60 text-xs">
                         {fill(t.version)}
+                    </div>
+                    <div className="mt-1 text-white/60 text-xs">
+                        {dict.a11y.footerNote}
                     </div>
                 </div>
             </div>

@@ -8,7 +8,7 @@ import type { Dictionary } from '@/i18n/types';
 const badgeUrl = (badgeLocale: string) =>
     `https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/white/${badgeLocale}?releaseDate=1770163200`;
 
-export default function CTASection({ t, locale }: { t: Dictionary['cta']; locale: Locale }) {
+export default function CTASection({ t, a11y, locale }: { t: Dictionary['cta']; a11y: Dictionary['a11y']; locale: Locale }) {
     const steps = [
         { number: 1, text: t.step1 },
         { number: 2, text: t.step2 },
@@ -16,7 +16,7 @@ export default function CTASection({ t, locale }: { t: Dictionary['cta']; locale
     ];
 
     return (
-        <section className="py-20 px-5" id="download">
+        <section className="py-20 px-5" id="download" aria-labelledby="download-title">
             <div className="max-w-5xl mx-auto">
                 <div className="panel overflow-hidden">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -24,7 +24,7 @@ export default function CTASection({ t, locale }: { t: Dictionary['cta']; locale
                         <div className="relative min-h-[320px] sm:min-h-[420px] lg:min-h-[500px] bg-accent">
                             <Image
                                 src="/brand/icon-orbit.webp"
-                                alt={t.appIconAlt}
+                                alt=""
                                 fill
                                 sizes="(min-width: 1024px) 512px, 100vw"
                                 className="object-cover"
@@ -35,21 +35,21 @@ export default function CTASection({ t, locale }: { t: Dictionary['cta']; locale
                         <div className="p-8 lg:p-12 flex flex-col justify-center">
                             {/* App Name */}
                             <div className="mb-8">
-                                <span dir="ltr" className="text-2xl font-bold tracking-tight block">Reminders+</span>
+                                <h2 id="download-title" dir="ltr" className="text-2xl font-bold tracking-tight">Reminders+</h2>
                                 <p className="text-label-secondary">{t.appSubtitle}</p>
                             </div>
 
                             {/* Steps */}
-                            <div className="space-y-4 mb-8">
+                            <ol role="list" className="space-y-4 mb-8" aria-label={a11y.steps}>
                                 {steps.map((step) => (
-                                    <div key={step.number} className="flex items-center gap-4">
-                                        <div className="w-8 h-8 rounded-full bg-accent/10 text-accent flex items-center justify-center text-sm font-bold">
+                                    <li key={step.number} className="flex items-center gap-4">
+                                        <div aria-hidden="true" className="w-8 h-8 rounded-full bg-accent/10 text-accent flex items-center justify-center text-sm font-bold">
                                             {step.number}
                                         </div>
                                         <span className="text-[17px] font-medium">{step.text}</span>
-                                    </div>
+                                    </li>
                                 ))}
-                            </div>
+                            </ol>
 
                             {/* Download Button */}
                             <a
@@ -61,7 +61,7 @@ export default function CTASection({ t, locale }: { t: Dictionary['cta']; locale
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
                                     src={badgeUrl(localeInfo[locale].badge)}
-                                    alt={t.badgeAlt}
+                                    alt={`${t.badgeAlt} ${a11y.newTab}`}
                                     // Apple's English badge if there is none for this language.
                                     onError={(event) => {
                                         const fallback = badgeUrl('en-us');
