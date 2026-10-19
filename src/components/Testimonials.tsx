@@ -47,7 +47,7 @@ export default function Testimonials() {
                     {testimonials.map((testimonial, index) => (
                         <div key={index} className="card bg-white">
                             <StarRating />
-                            <h3 className="text-xl font-sans mb-4">"{testimonial.quote}"</h3>
+                            <h3 className="text-xl font-sans mb-4">&ldquo;{testimonial.quote}&rdquo;</h3>
                             <div className="text-sm text-gray-600">
                                 <span className="font-medium">{testimonial.author}</span>
                                 <span className="mx-2">·</span>

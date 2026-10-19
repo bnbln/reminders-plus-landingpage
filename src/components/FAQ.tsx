@@ -19,7 +19,7 @@ export default function FAQ({ faqItems }: FAQProps) {
             <div className="max-w-3xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-sans text-center mb-4">
                     Got questions?<br />
-                    Here&apos;s the answers.
+                    Here are the answers.
                 </h2>
                 <p className="text-gray-600 text-center mb-12">
                     Everything you need to know about Reminders+.

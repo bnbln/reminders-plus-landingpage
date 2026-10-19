@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { APP_STORE_URL } from '@/lib/app-info';
 
 const steps = [
     { number: 1, text: "Download the app" },
@@ -59,7 +60,7 @@ export default function CTASection() {
 
                             {/* Download Button */}
                             <a
-                                href="https://apps.apple.com/us/app/reminders-pro/id6758573672?itscg=30200&itsct=apps_box_badge&mttnsubad=6758573672"
+                                href={`${APP_STORE_URL}?itscg=30200&itsct=apps_box_badge&mttnsubad=6758573672`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 style={{ display: 'inline-block' }}

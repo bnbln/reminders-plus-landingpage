@@ -4,7 +4,7 @@
 
 ## 1. Summary
 
-- Reminders+ has no user accounts, no advertising and no tracking or analytics SDKs.
+- Reminders+ has no user accounts, no advertising and no tracking or analytics SDKs. The app's privacy manifest declares that no data is collected.
 - Your tasks, projects, routines and settings are stored on your device.
 - We, the operators of Reminders+, do not run servers that receive your app data.
 - Optional features that involve Apple services (iCloud Sync, App Store purchases) are processed by Apple under Apple's privacy policy.
@@ -22,7 +22,7 @@ Everything you create in the app (tasks, notes, projects, routines, streaks, set
 
 ### 3.2 iCloud Sync (optional, Plus)
 
-If you enable iCloud Sync, your tasks and projects are synced across your Apple devices through your own iCloud account using Apple CloudKit. The data is stored in your private iCloud database, which we as developers cannot access. Apple is responsible for this processing; see [Apple's Privacy Policy](https://www.apple.com/legal/privacy/). You can turn sync off at any time in the app settings.
+If you enable iCloud Sync, your tasks and projects are synced across your Apple devices through your own iCloud account using Apple CloudKit. The data is stored in your private iCloud database, which we as developers cannot access. If CloudKit is temporarily unavailable, the app falls back to Apple's iCloud key-value storage in your account. Apple is responsible for this processing; see [Apple's Privacy Policy](https://www.apple.com/legal/privacy/). You can turn sync off at any time in the app settings.
 
 ### 3.3 AI Assist (optional, Plus)
 
@@ -34,19 +34,19 @@ The app only asks for these permissions when you use the related feature. You ca
 
 - **Calendars and Reminders:** to import events from Apple Calendar and reminders from Apple Reminders into your tasks. Imported items are stored locally like any other task.
 - **Location (while using the app):** to suggest your current place when you add a location to a task. The location is stored only with that task on your device.
-- **Notifications:** to remind you of due tasks. Notifications are scheduled locally on your device.
+- **Notifications:** to remind you of due tasks and, if you turn it on, to send a daily summary. Notifications are scheduled locally on your device. The app badge count is also calculated on your device.
 
-### 3.5 Widgets
+### 3.5 Widgets and app icon
 
-Home Screen and Lock Screen widgets read your streak and today's tasks from a shared storage area on your device. No data leaves your device for this.
+Home Screen and Lock Screen widgets read your streak and today's tasks from a shared storage area on your device. If you choose an app icon in your accent color, iOS switches the icon locally. No data leaves your device for this.
 
 ### 3.6 Purchases
 
 The Plus upgrade (monthly subscription or lifetime purchase) is sold through Apple's App Store. Payment is handled entirely by Apple; we do not receive your payment details. The app only checks with the App Store whether a purchase is active. See [Apple's Privacy Policy](https://www.apple.com/legal/privacy/).
 
-### 3.7 Data export
+### 3.7 Data export, backup and restore
 
-You can export all your tasks, projects and settings as a JSON file from the app settings at any time. Where you store or share this file is up to you.
+You can export all your tasks, projects and settings as a JSON file from the app settings at any time, free of charge. With Plus you can also restore a backup file you pick from your device. Where you store or share these files is up to you; we do not receive them.
 
 ### 3.8 Crash reports
 

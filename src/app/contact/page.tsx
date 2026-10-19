@@ -15,7 +15,7 @@ export default function Contact() {
             <main className="min-h-screen bg-[#F7F7F7] pt-24">
                 <article className="max-w-4xl mx-auto px-6 py-16">
                     <h1 className="text-4xl font-semibold mb-2">Contact Us</h1>
-                    <p className="text-gray-500 mb-12">We'd love to hear from you</p>
+                    <p className="text-gray-500 mb-12">We&apos;d love to hear from you</p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {/* Support */}
@@ -27,7 +27,7 @@ export default function Contact() {
                             </div>
                             <h2 className="text-xl font-semibold mb-2">Support</h2>
                             <p className="text-gray-600 mb-4">
-                                Having issues with the app? We're here to help.
+                                Having issues with the app? We&apos;re here to help.
                             </p>
                             <a
                                 href="mailto:support@benediktschnupp.com"
@@ -108,7 +108,7 @@ export default function Contact() {
                             <div>
                                 <h3 className="font-semibold text-gray-900 mb-1">Response Time</h3>
                                 <p className="text-gray-600">
-                                    We typically respond within 24-48 hours during business days. For urgent issues, please include "URGENT" in your email subject line.
+                                    We typically respond within 24-48 hours during business days. For urgent issues, please include &quot;URGENT&quot; in your email subject line.
                                 </p>
                             </div>
                         </div>

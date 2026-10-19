@@ -6,8 +6,8 @@ import { APP_MIN_IOS, APP_STORE_URL, APP_VERSION } from '@/lib/app-info';
 const footerLinks = {
     product: [
         { label: 'Home', href: '/' },
-        { label: 'Features', href: '#features' },
-        { label: 'FAQ', href: '#faq' },
+        { label: 'Features', href: '/#features' },
+        { label: 'FAQ', href: '/#faq' },
         { label: 'Download', href: APP_STORE_URL },
     ],
     legal: [

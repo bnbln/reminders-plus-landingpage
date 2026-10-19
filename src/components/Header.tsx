@@ -25,10 +25,10 @@ export default function Header() {
                     <Link href="/" className="text-sm font-medium hover:text-[#0070E1] transition-colors">
                         Home
                     </Link>
-                    <Link href="#features" className="text-sm font-medium hover:text-[#0070E1] transition-colors">
+                    <Link href="/#features" className="text-sm font-medium hover:text-[#0070E1] transition-colors">
                         Features
                     </Link>
-                    <Link href="#faq" className="text-sm font-medium hover:text-[#0070E1] transition-colors">
+                    <Link href="/#faq" className="text-sm font-medium hover:text-[#0070E1] transition-colors">
                         FAQ
                     </Link>
                 </div>

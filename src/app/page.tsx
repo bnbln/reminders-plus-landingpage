@@ -2,6 +2,7 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import FeatureIcons from '@/components/FeatureIcons';
 import FeatureCards from '@/components/FeatureCards';
+import MoreFeatures from '@/components/MoreFeatures';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import CTASection from '@/components/CTASection';
@@ -47,6 +48,7 @@ export default async function Home() {
             <Hero />
             <FeatureIcons />
             <FeatureCards />
+            <MoreFeatures />
             <Testimonials />
             <FAQ faqItems={faqItems} />
             <CTASection />
