@@ -10,11 +10,11 @@ const benefits = [
 
 export default function PlusSection() {
     return (
-        <section className="py-20 px-5" id="plus">
+        <section className="py-20 px-5" id="plus" aria-labelledby="plus-title">
             <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                 <div>
-                    <span className="section-label">Reminders+ Plus</span>
-                    <h2 className="large-title text-4xl md:text-6xl mt-3 mb-4">
+                    <p className="section-label">Reminders+ Plus</p>
+                    <h2 id="plus-title" className="large-title text-4xl md:text-6xl mt-3 mb-4">
                         Do more,<br />
                         when you want.
                     </h2>
@@ -23,15 +23,16 @@ export default function PlusSection() {
                     </p>
                 </div>
 
-                <div className="relative overflow-hidden rounded-[28px] p-6 md:p-7 text-white bg-gradient-to-br from-[#05070B] to-[#0B1424] shadow-2xl">
+                <div className="on-dark relative overflow-hidden rounded-[28px] p-6 md:p-7 text-white bg-gradient-to-br from-[#05070B] to-[#0B1424] shadow-2xl">
                     <div
+                        aria-hidden="true"
                         className="absolute inset-0 pointer-events-none"
                         style={{ background: 'linear-gradient(225deg, color-mix(in srgb, var(--accent) 50%, transparent) 0%, transparent 60%)' }}
                     />
                     <div className="relative">
                         <div className="flex items-center justify-between mb-8">
                             <div className="flex items-center gap-2.5">
-                                <span className="icon-tile w-7 h-7" style={tint('var(--accent)')}>
+                                <span aria-hidden="true" className="icon-tile w-7 h-7" style={tint('var(--accent)')}>
                                     <svg className="w-4 h-4" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M11 3l1.9 5.1L18 10l-5.1 1.9L11 17l-1.9-5.1L4 10l5.1-1.9z" />
                                     </svg>
@@ -42,20 +43,20 @@ export default function PlusSection() {
                         </div>
 
                         <h3 className="text-[28px] font-extrabold leading-tight tracking-tight mb-2">More focus, fewer limits.</h3>
-                        <p className="text-[15px] text-white/70 mb-6">Activate AI Assist, more projects and Cloud Sync directly via Apple.</p>
+                        <p className="text-[15px] text-white/75 mb-6">Activate AI Assist, more projects and Cloud Sync directly via Apple.</p>
 
-                        <div className="rounded-[20px] bg-white/[0.07] p-2 mb-6">
+                        <ul role="list" className="rounded-[20px] bg-white/[0.07] p-2 mb-6">
                             {benefits.map((benefit) => (
-                                <div key={benefit.label} className="flex items-center gap-3 px-2 py-2.5">
-                                    <span className="w-8 h-8 rounded-[10px] flex items-center justify-center" style={{ background: `color-mix(in srgb, ${benefit.color} 20%, transparent)`, color: benefit.color }}>
+                                <li key={benefit.label} className="flex items-center gap-3 px-2 py-2.5">
+                                    <span aria-hidden="true" className="w-8 h-8 rounded-[10px] flex items-center justify-center" style={{ background: `color-mix(in srgb, ${benefit.color} 20%, transparent)`, color: benefit.color }}>
                                         <svg className="w-[18px] h-[18px]" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                             <path d={benefit.path} />
                                         </svg>
                                     </span>
                                     <span className="text-[15px] font-semibold">{benefit.label}</span>
-                                </div>
+                                </li>
                             ))}
-                        </div>
+                        </ul>
 
                         <a
                             href={APP_STORE_URL}
@@ -64,6 +65,7 @@ export default function PlusSection() {
                             className="flex items-center justify-center gap-2 rounded-full bg-white text-[#0B0F17] font-bold py-3.5 hover:bg-white/90 transition-colors"
                         >
                             Discover Plus
+                            <span className="sr-only"> on the App Store (opens in a new tab)</span>
                             <svg className="w-[18px] h-[18px]" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                                 <path d="M5 12h14M13 6l6 6-6 6" />
                             </svg>
