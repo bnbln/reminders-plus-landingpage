@@ -39,14 +39,9 @@ export default function FeatureIcons() {
             <ul role="list" className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-3">
                 {features.map((feature) => (
                     <li key={feature.title} className="tile p-4 flex md:flex-col items-center md:items-start gap-4 md:gap-3">
-                        <div className="flex items-start justify-between shrink-0 md:w-full">
-                            <span className="badge-icon w-10 h-10" style={tint(feature.color)}>
-                                {feature.icon}
-                            </span>
-                            <svg className="hidden md:block w-4 h-4 text-label-tertiary mt-1" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="m9 18 6-6-6-6" />
-                            </svg>
-                        </div>
+                        <span className="badge-icon w-10 h-10 shrink-0" style={tint(feature.color)}>
+                            {feature.icon}
+                        </span>
                         <div className="flex-1">
                             <h3 className="text-[17px] font-bold leading-tight">{feature.title}</h3>
                             <p className="text-sm text-label-secondary mt-0.5">{feature.subtitle}</p>
