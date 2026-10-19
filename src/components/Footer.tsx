@@ -97,6 +97,9 @@ export default function Footer() {
                     <div className="mt-2 text-white/60 text-xs">
                         Version {APP_VERSION} · iPhone & iPad · iOS {APP_MIN_IOS} or later
                     </div>
+                    <div className="mt-1 text-white/60 text-xs">
+                        Accessible website · built to WCAG 2.1 AA
+                    </div>
                 </div>
             </div>
         </footer>
