@@ -11,7 +11,6 @@ const sv: Dictionary = {
         faq: 'Vanliga frågor',
         download: 'Ladda ner',
         home: 'Hem',
-        logoAlt: 'Reminders+ logotyp',
     },
     language: {
         label: 'Språk',
@@ -142,7 +141,6 @@ const sv: Dictionary = {
         step2: 'Lägg till din första uppgift',
         step3: 'Starta din svit!',
         appSubtitle: 'Uppgifter & vanor',
-        appIconAlt: 'Reminders+ appsymbol',
         badgeAlt: 'Hämta i App Store',
         note: 'Gratis nedladdning · Inget konto krävs',
     },
@@ -179,20 +177,18 @@ const sv: Dictionary = {
         originalOnly: 'Det här dokumentet finns bara på engelska.',
     },
     a11y: {
-        // Screen reader texts. Mostly invisible, except footerNote.
-        skipToContent: 'Skip to content',
-        mainNav: 'Main',
-        home: 'Reminders+ home',
-        onAppStore: 'on the App Store',
-        newTab: '(opens in a new tab)',
-        highlights: 'Highlights',
-        // {values}: the number of tasks completed on each day, comma separated.
-        activityChart: 'Activity over the last 14 days. Tasks completed per day: {values}.',
-        taskDone: 'done',
-        taskOpen: 'open',
-        rating: '5 out of 5 stars',
-        steps: 'Get started in three steps',
-        footerNote: 'Accessible website · built to WCAG 2.1 AA',
+        skipToContent: 'Hoppa till innehåll',
+        mainNav: 'Huvudmeny',
+        home: 'Reminders+ startsida',
+        onAppStore: 'i App Store',
+        newTab: '(öppnas i ny flik)',
+        highlights: 'Höjdpunkter',
+        activityChart: 'Aktivitet de senaste 14 dagarna. Klara uppgifter per dag: {values}.',
+        taskDone: 'klar',
+        taskOpen: 'öppen',
+        rating: '5 av 5 stjärnor',
+        steps: 'Kom igång i tre steg',
+        footerNote: 'Tillgänglig webbplats · enligt WCAG 2.1 AA',
     },
 };
 

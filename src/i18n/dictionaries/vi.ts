@@ -11,7 +11,6 @@ const vi: Dictionary = {
         faq: 'Hỏi đáp',
         download: 'Tải về',
         home: 'Trang chủ',
-        logoAlt: 'Logo Reminders+',
     },
     language: {
         label: 'Ngôn ngữ',
@@ -142,7 +141,6 @@ const vi: Dictionary = {
         step2: 'Thêm nhiệm vụ đầu tiên',
         step3: 'Bắt đầu chuỗi ngày!',
         appSubtitle: 'Nhiệm vụ & Thói quen',
-        appIconAlt: 'Biểu tượng ứng dụng Reminders+',
         badgeAlt: 'Tải về trên App Store',
         note: 'Tải miễn phí · Không cần tài khoản',
     },
@@ -179,20 +177,18 @@ const vi: Dictionary = {
         originalOnly: 'Tài liệu này chỉ có bằng tiếng Anh.',
     },
     a11y: {
-        // Screen reader texts. Mostly invisible, except footerNote.
-        skipToContent: 'Skip to content',
-        mainNav: 'Main',
-        home: 'Reminders+ home',
-        onAppStore: 'on the App Store',
-        newTab: '(opens in a new tab)',
-        highlights: 'Highlights',
-        // {values}: the number of tasks completed on each day, comma separated.
-        activityChart: 'Activity over the last 14 days. Tasks completed per day: {values}.',
-        taskDone: 'done',
-        taskOpen: 'open',
-        rating: '5 out of 5 stars',
-        steps: 'Get started in three steps',
-        footerNote: 'Accessible website · built to WCAG 2.1 AA',
+        skipToContent: 'Chuyển đến nội dung',
+        mainNav: 'Menu chính',
+        home: 'Trang chủ Reminders+',
+        onAppStore: 'trên App Store',
+        newTab: '(mở trong tab mới)',
+        highlights: 'Điểm nổi bật',
+        activityChart: 'Hoạt động trong 14 ngày qua. Số nhiệm vụ hoàn thành mỗi ngày: {values}.',
+        taskDone: 'đã xong',
+        taskOpen: 'chưa xong',
+        rating: '5 trên 5 sao',
+        steps: 'Bắt đầu trong ba bước',
+        footerNote: 'Trang web dễ tiếp cận · theo WCAG 2.1 AA',
     },
 };
 

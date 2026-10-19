@@ -11,7 +11,6 @@ const tr: Dictionary = {
         faq: 'SSS',
         download: 'İndir',
         home: 'Ana Sayfa',
-        logoAlt: 'Reminders+ logosu',
     },
     language: {
         label: 'Dil',
@@ -142,7 +141,6 @@ const tr: Dictionary = {
         step2: 'İlk görevini ekle',
         step3: 'Serine başla!',
         appSubtitle: 'Görevler ve Alışkanlıklar',
-        appIconAlt: 'Reminders+ uygulama simgesi',
         badgeAlt: 'App Store\'dan indirin',
         note: 'Ücretsiz indir · Hesap gerekmez',
     },
@@ -179,20 +177,18 @@ const tr: Dictionary = {
         originalOnly: 'Bu belge yalnızca İngilizce olarak mevcuttur.',
     },
     a11y: {
-        // Screen reader texts. Mostly invisible, except footerNote.
-        skipToContent: 'Skip to content',
-        mainNav: 'Main',
-        home: 'Reminders+ home',
-        onAppStore: 'on the App Store',
-        newTab: '(opens in a new tab)',
-        highlights: 'Highlights',
-        // {values}: the number of tasks completed on each day, comma separated.
-        activityChart: 'Activity over the last 14 days. Tasks completed per day: {values}.',
-        taskDone: 'done',
-        taskOpen: 'open',
-        rating: '5 out of 5 stars',
-        steps: 'Get started in three steps',
-        footerNote: 'Accessible website · built to WCAG 2.1 AA',
+        skipToContent: 'İçeriğe geç',
+        mainNav: 'Ana menü',
+        home: 'Reminders+ ana sayfa',
+        onAppStore: 'App Store\'da',
+        newTab: '(yeni sekmede açılır)',
+        highlights: 'Öne çıkanlar',
+        activityChart: 'Son 14 günün etkinliği. Günlük tamamlanan görevler: {values}.',
+        taskDone: 'tamamlandı',
+        taskOpen: 'açık',
+        rating: '5 üzerinden 5 yıldız',
+        steps: 'Üç adımda başla',
+        footerNote: 'Erişilebilir web sitesi · WCAG 2.1 AA uyumlu',
     },
 };
 

@@ -11,7 +11,6 @@ const da: Dictionary = {
         faq: 'FAQ',
         download: 'Download',
         home: 'Forside',
-        logoAlt: 'Reminders+ logo',
     },
     language: {
         label: 'Sprog',
@@ -142,7 +141,6 @@ const da: Dictionary = {
         step2: 'Tilføj din første opgave',
         step3: 'Start din serie!',
         appSubtitle: 'Opgaver & vaner',
-        appIconAlt: 'Reminders+ appsymbol',
         badgeAlt: 'Hent i App Store',
         note: 'Gratis download · Ingen konto påkrævet',
     },
@@ -179,20 +177,18 @@ const da: Dictionary = {
         originalOnly: 'Dette dokument findes kun på engelsk.',
     },
     a11y: {
-        // Screen reader texts. Mostly invisible, except footerNote.
-        skipToContent: 'Skip to content',
-        mainNav: 'Main',
-        home: 'Reminders+ home',
-        onAppStore: 'on the App Store',
-        newTab: '(opens in a new tab)',
-        highlights: 'Highlights',
-        // {values}: the number of tasks completed on each day, comma separated.
-        activityChart: 'Activity over the last 14 days. Tasks completed per day: {values}.',
-        taskDone: 'done',
-        taskOpen: 'open',
-        rating: '5 out of 5 stars',
-        steps: 'Get started in three steps',
-        footerNote: 'Accessible website · built to WCAG 2.1 AA',
+        skipToContent: 'Gå til indhold',
+        mainNav: 'Hovedmenu',
+        home: 'Reminders+ forside',
+        onAppStore: 'i App Store',
+        newTab: '(åbner i ny fane)',
+        highlights: 'Højdepunkter',
+        activityChart: 'Aktivitet de seneste 14 dage. Fuldførte opgaver pr. dag: {values}.',
+        taskDone: 'fuldført',
+        taskOpen: 'åben',
+        rating: '5 ud af 5 stjerner',
+        steps: 'Kom i gang i tre trin',
+        footerNote: 'Tilgængeligt website · efter WCAG 2.1 AA',
     },
 };
 

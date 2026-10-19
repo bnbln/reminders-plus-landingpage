@@ -11,7 +11,6 @@ const hi: Dictionary = {
         faq: 'FAQ',
         download: 'डाउनलोड',
         home: 'होम',
-        logoAlt: 'Reminders+ लोगो',
     },
     language: {
         label: 'भाषा',
@@ -142,7 +141,6 @@ const hi: Dictionary = {
         step2: 'अपना पहला कार्य जोड़ें',
         step3: 'अपनी स्ट्रीक शुरू करें!',
         appSubtitle: 'कार्य और आदतें',
-        appIconAlt: 'Reminders+ ऐप आइकन',
         badgeAlt: 'App Store से डाउनलोड करें',
         note: 'मुफ़्त डाउनलोड · किसी अकाउंट की ज़रूरत नहीं',
     },
@@ -179,20 +177,18 @@ const hi: Dictionary = {
         originalOnly: 'यह दस्तावेज़ केवल अंग्रेज़ी में उपलब्ध है।',
     },
     a11y: {
-        // Screen reader texts. Mostly invisible, except footerNote.
-        skipToContent: 'Skip to content',
-        mainNav: 'Main',
-        home: 'Reminders+ home',
-        onAppStore: 'on the App Store',
-        newTab: '(opens in a new tab)',
-        highlights: 'Highlights',
-        // {values}: the number of tasks completed on each day, comma separated.
-        activityChart: 'Activity over the last 14 days. Tasks completed per day: {values}.',
-        taskDone: 'done',
-        taskOpen: 'open',
-        rating: '5 out of 5 stars',
-        steps: 'Get started in three steps',
-        footerNote: 'Accessible website · built to WCAG 2.1 AA',
+        skipToContent: 'सामग्री पर जाएँ',
+        mainNav: 'मुख्य मेनू',
+        home: 'Reminders+ होम',
+        onAppStore: 'App Store पर',
+        newTab: '(नए टैब में खुलता है)',
+        highlights: 'मुख्य बातें',
+        activityChart: 'पिछले 14 दिनों की गतिविधि। हर दिन पूरे किए गए कार्य: {values}।',
+        taskDone: 'पूरा',
+        taskOpen: 'बाकी',
+        rating: '5 में से 5 स्टार',
+        steps: 'तीन चरणों में शुरू करें',
+        footerNote: 'सुलभ वेबसाइट · WCAG 2.1 AA के अनुसार',
     },
 };
 

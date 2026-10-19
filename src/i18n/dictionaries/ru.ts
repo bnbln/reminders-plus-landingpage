@@ -11,7 +11,6 @@ const ru: Dictionary = {
         faq: 'Вопросы',
         download: 'Скачать',
         home: 'Главная',
-        logoAlt: 'Логотип Reminders+',
     },
     language: {
         label: 'Язык',
@@ -142,7 +141,6 @@ const ru: Dictionary = {
         step2: 'Добавь первую задачу',
         step3: 'Начни свою серию!',
         appSubtitle: 'Задачи и привычки',
-        appIconAlt: 'Значок приложения Reminders+',
         badgeAlt: 'Загрузите в App Store',
         note: 'Бесплатно · Без аккаунта',
     },
@@ -179,20 +177,18 @@ const ru: Dictionary = {
         originalOnly: 'Этот документ доступен только на английском языке.',
     },
     a11y: {
-        // Screen reader texts. Mostly invisible, except footerNote.
-        skipToContent: 'Skip to content',
-        mainNav: 'Main',
-        home: 'Reminders+ home',
-        onAppStore: 'on the App Store',
-        newTab: '(opens in a new tab)',
-        highlights: 'Highlights',
-        // {values}: the number of tasks completed on each day, comma separated.
-        activityChart: 'Activity over the last 14 days. Tasks completed per day: {values}.',
-        taskDone: 'done',
-        taskOpen: 'open',
-        rating: '5 out of 5 stars',
-        steps: 'Get started in three steps',
-        footerNote: 'Accessible website · built to WCAG 2.1 AA',
+        skipToContent: 'Перейти к содержимому',
+        mainNav: 'Главное меню',
+        home: 'Главная Reminders+',
+        onAppStore: 'в App Store',
+        newTab: '(откроется в новой вкладке)',
+        highlights: 'Главное',
+        activityChart: 'Активность за последние 14 дней. Выполнено задач по дням: {values}.',
+        taskDone: 'выполнено',
+        taskOpen: 'открыто',
+        rating: '5 из 5 звёзд',
+        steps: 'Начни за три шага',
+        footerNote: 'Доступный сайт · по WCAG 2.1 AA',
     },
 };
 

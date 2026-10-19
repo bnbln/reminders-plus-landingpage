@@ -11,7 +11,6 @@ const pl: Dictionary = {
         faq: 'FAQ',
         download: 'Pobierz',
         home: 'Strona główna',
-        logoAlt: 'Logo Reminders+',
     },
     language: {
         label: 'Język',
@@ -142,7 +141,6 @@ const pl: Dictionary = {
         step2: 'Dodaj pierwsze zadanie',
         step3: 'Zacznij swoją passę!',
         appSubtitle: 'Zadania i nawyki',
-        appIconAlt: 'Ikona aplikacji Reminders+',
         badgeAlt: 'Pobierz w App Store',
         note: 'Darmowe pobieranie · Konto nie jest wymagane',
     },
@@ -179,20 +177,18 @@ const pl: Dictionary = {
         originalOnly: 'Ten dokument jest dostępny tylko w języku angielskim.',
     },
     a11y: {
-        // Screen reader texts. Mostly invisible, except footerNote.
-        skipToContent: 'Skip to content',
-        mainNav: 'Main',
-        home: 'Reminders+ home',
-        onAppStore: 'on the App Store',
-        newTab: '(opens in a new tab)',
-        highlights: 'Highlights',
-        // {values}: the number of tasks completed on each day, comma separated.
-        activityChart: 'Activity over the last 14 days. Tasks completed per day: {values}.',
-        taskDone: 'done',
-        taskOpen: 'open',
-        rating: '5 out of 5 stars',
-        steps: 'Get started in three steps',
-        footerNote: 'Accessible website · built to WCAG 2.1 AA',
+        skipToContent: 'Przejdź do treści',
+        mainNav: 'Główna',
+        home: 'Strona główna Reminders+',
+        onAppStore: 'w App Store',
+        newTab: '(otwiera się w nowej karcie)',
+        highlights: 'Najważniejsze',
+        activityChart: 'Aktywność z ostatnich 14 dni. Ukończone zadania dziennie: {values}.',
+        taskDone: 'zrobione',
+        taskOpen: 'otwarte',
+        rating: '5 na 5 gwiazdek',
+        steps: 'Zacznij w trzech krokach',
+        footerNote: 'Dostępna strona · zgodna z WCAG 2.1 AA',
     },
 };
 
