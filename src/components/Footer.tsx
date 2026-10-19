@@ -1,13 +1,14 @@
 'use client';
 
 import Link from 'next/link';
+import { APP_MIN_IOS, APP_STORE_URL, APP_VERSION } from '@/lib/app-info';
 
 const footerLinks = {
     product: [
         { label: 'Home', href: '/' },
         { label: 'Features', href: '#features' },
         { label: 'FAQ', href: '#faq' },
-        { label: 'Download', href: 'https://apps.apple.com/us/app/reminders/id6758573672' },
+        { label: 'Download', href: APP_STORE_URL },
     ],
     legal: [
         { label: 'Privacy Policy', href: '/privacy' },
@@ -66,7 +67,7 @@ export default function Footer() {
                     <div>
                         <h4 className="font-medium mb-4">Get Started</h4>
                         <Link
-                            href="https://apps.apple.com/us/app/reminders/id6758573672"
+                            href={APP_STORE_URL}
                             className="inline-block bg-[#0070E1] text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-[#005BB5] transition-colors"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -91,6 +92,9 @@ export default function Footer() {
                 {/* Copyright */}
                 <div className="text-center mt-8 text-gray-500 text-sm">
                     © {new Date().getFullYear()} Reminders+. All rights reserved.
+                    <div className="mt-2 text-gray-600 text-xs">
+                        Version {APP_VERSION} · iPhone & iPad · iOS {APP_MIN_IOS} or later
+                    </div>
                 </div>
             </div>
         </footer>

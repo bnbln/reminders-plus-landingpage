@@ -1,6 +1,6 @@
 # Terms of Use
 
-**Last updated: February 8, 2025**
+**Last updated: October 19, 2026**
 
 ## 1. Acceptance of Terms
 
@@ -48,7 +48,7 @@ You are solely responsible for:
 
 ## 6. Privacy
 
-Your use of the Services is governed by our [Privacy Policy](/privacy), which is incorporated by reference. By using the Services, you consent to the collection, use, and sharing of your information as described in the Privacy Policy.
+Your use of the Services is governed by our [Privacy Policy](/privacy), which is incorporated by reference. It explains which data is processed when you use the Services.
 
 ## 7. Intellectual Property
 
@@ -56,7 +56,9 @@ The Services and all content, features, functionality, including but not limited
 
 ## 8. Fees and Payments
 
-We reserve the right to charge fees for the Services or any features thereof at any time. If fees are implemented, your continued use of the paid features constitutes agreement to pay such fees. All fees are non-refundable except as expressly stated or required by applicable law.
+The core features of Reminders+ are free. The optional Plus upgrade (AI Assist, more than 4 projects and iCloud Sync) is offered as an auto-renewing monthly subscription or as a one-time lifetime purchase. Prices are shown in the App Store before you buy.
+
+All purchases are processed by Apple through the App Store and are subject to Apple's terms, including the [Apple Media Services Terms](https://www.apple.com/legal/internet-services/itunes/) and the [Licensed Application End User License Agreement](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/). Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period. You can manage or cancel your subscription in your Apple account settings. Refunds are handled by Apple. Statutory consumer rights remain unaffected.
 
 ## 9. DISCLAIMER OF WARRANTIES
 
@@ -106,7 +108,7 @@ TO THE FULLEST EXTENT PERMITTED BY LAW, YOU WAIVE ANY RIGHT TO PARTICIPATE IN A 
 
 ### Governing Law
 
-**For EU Users:** These Terms are governed by German law. Mandatory consumer protection laws of your country of residence may apply. The European Commission's Online Dispute Resolution platform is available at [https://ec.europa.eu/consumers/odr/](https://ec.europa.eu/consumers/odr/).
+**For EU Users:** These Terms are governed by German law. Mandatory consumer protection laws of your country of residence may apply.
 
 **For US Users:** These Terms are governed by the laws of the State of Delaware, without regard to conflict of law principles.
 

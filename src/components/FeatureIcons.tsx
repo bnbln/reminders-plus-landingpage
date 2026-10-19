@@ -3,9 +3,9 @@
 const features = [
     {
         icon: (
-            <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-12 h-12" aria-hidden="true" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="24" cy="24" r="20" stroke="#0070E1" strokeWidth="2" />
-                <text x="24" y="30" textAnchor="middle" fontSize="20">🔥</text>
+                <path d="M24 13C24 13 31 19 31 26C31 30.4 27.9 34 24 34C20.1 34 17 30.4 17 26C17 22.5 19 20 20.5 18.5C20.5 21.5 22 23 23.5 23.5C23 19.5 24 16 24 13Z" stroke="#0070E1" strokeWidth="2" strokeLinejoin="round" />
             </svg>
         ),
         title: "Daily streak system",
@@ -13,7 +13,7 @@ const features = [
     },
     {
         icon: (
-            <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-12 h-12" aria-hidden="true" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="24" cy="24" r="20" stroke="#0070E1" strokeWidth="2" />
                 <path d="M16 24L22 30L32 18" stroke="#0070E1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
@@ -23,12 +23,13 @@ const features = [
     },
     {
         icon: (
-            <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-12 h-12" aria-hidden="true" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="24" cy="24" r="20" stroke="#0070E1" strokeWidth="2" />
-                <path d="M24 16V24L30 28" stroke="#0070E1" strokeWidth="2" strokeLinecap="round" />
+                <rect x="17" y="22" width="14" height="11" rx="2" stroke="#0070E1" strokeWidth="2" />
+                <path d="M20 22V19C20 16.8 21.8 15 24 15C26.2 15 28 16.8 28 19V22" stroke="#0070E1" strokeWidth="2" strokeLinecap="round" />
             </svg>
         ),
-        title: "100% private, local storage",
+        title: "Private by design, no account",
         glow: "glow-purple"
     }
 ];

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { APP_STORE_URL } from '@/lib/app-info';
 
 export default function Hero() {
     return (
@@ -49,7 +50,7 @@ export default function Hero() {
 
                 {/* CTA Button */}
                 <motion.a
-                    href="https://apps.apple.com/us/app/reminders/id6758573672"
+                    href={APP_STORE_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     initial={{ opacity: 0, y: 20 }}

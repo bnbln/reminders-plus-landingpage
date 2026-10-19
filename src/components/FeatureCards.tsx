@@ -71,7 +71,7 @@ export default function FeatureCards() {
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                                         </svg>
                                     </div>
-                                    <span className="text-sm">100% local storage</span>
+                                    <span className="text-sm">Stored on your device</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <div className="w-5 h-5 bg-[#0070E1] rounded-full flex items-center justify-center">
@@ -87,12 +87,12 @@ export default function FeatureCards() {
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                                         </svg>
                                     </div>
-                                    <span className="text-sm">Fast & lightweight</span>
+                                    <span className="text-sm">No tracking, no ads</span>
                                 </div>
                             </div>
                         </div>
                         <p className="mt-6 text-sm text-gray-700">
-                            Maximum privacy. Your data never leaves your device.
+                            Your tasks stay on your device. Optional iCloud sync runs through your own Apple account.
                         </p>
                     </div>
                 </div>

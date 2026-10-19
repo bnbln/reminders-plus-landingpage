@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { APP_STORE_URL } from '@/lib/app-info';
 
 export default function Header() {
     return (
@@ -34,7 +35,7 @@ export default function Header() {
 
                 {/* Download Button */}
                 <Link
-                    href="https://apps.apple.com/us/app/reminders/id6758573672"
+                    href={APP_STORE_URL}
                     className="btn-primary text-sm"
                     target="_blank"
                     rel="noopener noreferrer"

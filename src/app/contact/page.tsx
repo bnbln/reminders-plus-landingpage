@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import { APP_STORE_URL } from '@/lib/app-info';
 
 export const metadata = {
     title: 'Contact — Reminders+',
@@ -29,7 +30,7 @@ export default function Contact() {
                                 Having issues with the app? We're here to help.
                             </p>
                             <a
-                                href="mailto:support@reminders.plus"
+                                href="mailto:support@benediktschnupp.com"
                                 className="text-[#0070E1] hover:underline font-medium"
                             >
                                 support@benediktschnupp.com
@@ -86,7 +87,7 @@ export default function Contact() {
                                 Enjoying Reminders+? Leave us a review!
                             </p>
                             <a
-                                href="https://apps.apple.com/us/app/reminders/id6758573672"
+                                href={APP_STORE_URL}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-[#0070E1] hover:underline font-medium"
