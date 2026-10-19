@@ -1,8 +1,10 @@
 import { APP_LANGUAGE_COUNT } from '@/lib/app-info';
+import { tint } from '@/lib/tint';
 
 const features = [
     {
         title: 'Widgets',
+        color: 'var(--accent)',
         text: 'Your streak and today\'s tasks on the Home Screen and Lock Screen. Check tasks off without opening the app.',
         icon: (
             <>
@@ -15,6 +17,7 @@ const features = [
     },
     {
         title: 'AI Assist',
+        color: 'var(--green)',
         text: 'Create, find and move tasks in plain language. Runs on Apple Intelligence, right on your device.',
         plus: true,
         icon: (
@@ -26,12 +29,14 @@ const features = [
     },
     {
         title: 'iCloud Sync',
+        color: '#F59E0B',
         text: 'Keep tasks and projects in sync across your iPhone and iPad through your own iCloud account.',
         plus: true,
         icon: <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />,
     },
     {
         title: 'Import from Apple',
+        color: 'var(--red)',
         text: 'Bring in reminders from Apple Reminders and events from Apple Calendar as tasks.',
         icon: (
             <>
@@ -42,16 +47,18 @@ const features = [
     },
     {
         title: 'Make it yours',
+        color: 'var(--indigo)',
         text: 'Light and dark mode, accent colors, and an app icon that takes on your color.',
         icon: (
             <>
                 <circle cx="12" cy="12" r="9" />
-                <path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" />
+                <path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" stroke="none" />
             </>
         ),
     },
     {
         title: `${APP_LANGUAGE_COUNT} languages`,
+        color: 'var(--teal)',
         text: 'Use Reminders+ in English, German, Spanish, French, Japanese, Chinese, Arabic and many more.',
         icon: (
             <>
@@ -64,35 +71,35 @@ const features = [
 
 export default function MoreFeatures() {
     return (
-        <section className="py-20 px-6" id="more-features">
+        <section className="py-20 px-5" id="more-features">
             <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-sans mb-4">
+                    <h2 className="large-title text-4xl md:text-6xl mb-4">
                         Everything you need,<br />
                         nothing you don&apos;t.
                     </h2>
-                    <p className="text-gray-600">
+                    <p className="text-lg text-label-secondary">
                         Free to use. Upgrade to Plus for AI Assist, more than 4 projects and iCloud Sync.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     {features.map((feature) => (
-                        <div key={feature.title} className="card">
+                        <div key={feature.title} className="panel p-6">
                             <div className="flex items-center justify-between mb-6">
-                                <div className="w-11 h-11 rounded-xl bg-[#0070E1]/10 text-[#0070E1] flex items-center justify-center">
+                                <div className="icon-tile w-11 h-11 !rounded-[12px]" style={tint(feature.color)}>
                                     <svg className="w-6 h-6" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                         {feature.icon}
                                     </svg>
                                 </div>
                                 {feature.plus && (
-                                    <span className="text-xs font-medium text-[#0070E1] bg-[#0070E1]/10 rounded-full px-3 py-1">
+                                    <span className="text-xs font-semibold text-accent bg-accent/10 rounded-full px-3 py-1">
                                         Plus
                                     </span>
                                 )}
                             </div>
-                            <h3 className="text-lg font-medium mb-2">{feature.title}</h3>
-                            <p className="text-sm text-gray-600">{feature.text}</p>
+                            <h3 className="text-[19px] font-bold tracking-tight mb-1.5">{feature.title}</h3>
+                            <p className="text-[15px] leading-snug text-label-secondary">{feature.text}</p>
                         </div>
                     ))}
                 </div>

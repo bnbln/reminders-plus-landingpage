@@ -2,15 +2,16 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import StreakFlame from '@/components/StreakFlame';
+import { tint } from '@/lib/tint';
 import { APP_STORE_URL } from '@/lib/app-info';
 
 export default function Hero() {
     return (
         <section className="pt-32 pb-16 px-6 relative overflow-hidden">
             {/* Background Glows */}
-            <div className="absolute top-20 left-1/4 w-96 h-96 glow-blue opacity-100 pointer-events-none" />
-            <div className="absolute top-40 right-1/4 w-80 h-80 glow-light-blue opacity-90 pointer-events-none" />
-            <div className="absolute top-60 left-1/2 w-64 h-64 glow-purple opacity-80 pointer-events-none" />
+            <div className="absolute top-10 left-1/2 -translate-x-[70%] w-[36rem] h-[36rem] accent-wash pointer-events-none" />
+            <div className="absolute top-72 left-1/2 -translate-x-[10%] w-[28rem] h-[28rem] flame-wash pointer-events-none" />
 
             <div className="max-w-4xl mx-auto text-center relative z-10">
                 {/* Streak Badge */}
@@ -18,10 +19,12 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="inline-flex items-center gap-2 bg-white rounded-full px-4 py-2 mb-8 shadow-sm"
+                    className="inline-flex items-center gap-2 tile rounded-full pl-2 pr-4 py-1.5 mb-8"
                 >
-                    <span className="text-lg">🔥</span>
-                    <span className="text-sm font-medium">Start your streak today</span>
+                    <span className="badge-icon w-7 h-7" style={tint('var(--flame-outer)')}>
+                        <StreakFlame className="w-3.5 h-4" />
+                    </span>
+                    <span className="text-sm font-semibold">Start your streak today</span>
                 </motion.div>
 
                 {/* Headline */}
@@ -29,10 +32,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-                    className="text-5xl md:text-7xl font-sans mb-6"
-                    style={{
-                        letterSpacing: "-0.03em"
-                    }}
+                    className="large-title text-[44px] md:text-[80px] mb-6"
                 >
                     One task a day.<br />
                     Endless results.
@@ -43,7 +43,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
-                    className="text-lg text-gray-600 mb-8 max-w-lg mx-auto"
+                    className="text-lg md:text-xl text-label-secondary mb-8 max-w-lg mx-auto"
                 >
                     Build lasting habits with daily streaks. Organize tasks and routines in one beautiful app.
                 </motion.p>
@@ -56,10 +56,19 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
-                    className="inline-block bg-[#0070E1] text-white text-lg px-8 py-4 rounded-full font-medium hover:bg-[#005BB5] transition-colors"
+                    className="btn-primary text-[17px] !px-7 !py-3.5"
                 >
-                    Download Free
+                    Download free
                 </motion.a>
+
+                <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                    className="mt-4 text-sm text-label-secondary"
+                >
+                    iPhone &amp; iPad · No account needed
+                </motion.p>
 
                 {/* Phone Mockups Container */}
                 <motion.div
@@ -74,7 +83,7 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 70, rotate: 0 }}
                             animate={{ opacity: 1, y: 0, rotate: 6 }}
                             transition={{ duration: 0.65, delay: 0.35, ease: "easeInOut" }}
-                            className="w-48 md:w-64 shadow-2xl rounded-3xl overflow-hidden bg-white"
+                            className="w-48 md:w-64 shadow-2xl rounded-[2.25rem] overflow-hidden bg-white ring-1 ring-black/5"
                         >
                             <div className="aspect-[9/19] relative">
                                 <Image
@@ -92,7 +101,7 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 70, rotate: 0 }}
                             animate={{ opacity: 1, y: 0, rotate: -6 }}
                             transition={{ duration: 0.65, delay: 0.4, ease: "easeInOut" }}
-                            className="w-48 md:w-64 shadow-2xl rounded-3xl overflow-hidden bg-white"
+                            className="w-48 md:w-64 shadow-2xl rounded-[2.25rem] overflow-hidden bg-white ring-1 ring-black/5"
                         >
                             <div className="aspect-[9/19] relative">
                                 <Image

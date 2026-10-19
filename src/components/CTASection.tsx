@@ -11,13 +11,14 @@ const steps = [
 
 export default function CTASection() {
     return (
-        <section className="py-20 px-6" id="download">
+        <section className="py-20 px-5" id="download">
             <div className="max-w-5xl mx-auto">
-                <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100">
+                <div className="panel overflow-hidden">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {/* Left Side - Phone Screenshot */}
-                        <div className="relative bg-gradient-to-br from-gray-50 to-gray-100 p-8 flex items-center justify-center min-h-[500px]">
-                            <div className="w-56 md:w-64 shadow-2xl rounded-3xl overflow-hidden">
+                        <div className="relative bg-ios-bg p-8 flex items-center justify-center min-h-[500px] overflow-hidden">
+                            <div className="absolute inset-0 accent-wash pointer-events-none" />
+                            <div className="relative w-56 md:w-64 shadow-2xl rounded-[2.25rem] overflow-hidden ring-1 ring-black/5">
                                 <div className="aspect-[9/19] relative">
                                     <Image
                                         src="/screens/IMG_3085.PNG"
@@ -38,11 +39,11 @@ export default function CTASection() {
                                     alt="Reminders+ App Icon"
                                     width={80}
                                     height={80}
-                                    className="rounded-3xl shadow-lg"
+                                    className="rounded-[18px] shadow-lg"
                                 />
                                 <div>
-                                    <span className="text-2xl font-semibold block">Reminders+</span>
-                                    <p className="text-gray-500">Tasks & Habits</p>
+                                    <span className="text-2xl font-bold tracking-tight block">Reminders+</span>
+                                    <p className="text-label-secondary">Tasks &amp; Habits</p>
                                 </div>
                             </div>
 
@@ -50,10 +51,10 @@ export default function CTASection() {
                             <div className="space-y-4 mb-8">
                                 {steps.map((step) => (
                                     <div key={step.number} className="flex items-center gap-4">
-                                        <div className="w-8 h-8 rounded-full bg-[#0070E1]/10 text-[#0070E1] flex items-center justify-center text-sm font-semibold">
+                                        <div className="w-8 h-8 rounded-full bg-accent/10 text-accent flex items-center justify-center text-sm font-bold">
                                             {step.number}
                                         </div>
-                                        <span className="text-gray-700">{step.text}</span>
+                                        <span className="text-[17px] font-medium">{step.text}</span>
                                     </div>
                                 ))}
                             </div>
@@ -73,7 +74,7 @@ export default function CTASection() {
                                 />
                             </a>
 
-                            <p className="text-gray-400 text-sm mt-4 text-center md:text-left">
+                            <p className="text-label-secondary text-sm mt-4 text-center md:text-left">
                                 Free download • No account required
                             </p>
                         </div>

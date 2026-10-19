@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import FeatureIcons from '@/components/FeatureIcons';
 import FeatureCards from '@/components/FeatureCards';
 import MoreFeatures from '@/components/MoreFeatures';
+import PlusSection from '@/components/PlusSection';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import CTASection from '@/components/CTASection';
@@ -43,12 +44,13 @@ export default async function Home() {
     const faqItems = await loadFAQItems();
     
     return (
-        <main className="min-h-screen bg-[#F7F7F7]">
+        <main className="min-h-screen">
             <Header />
             <Hero />
             <FeatureIcons />
             <FeatureCards />
             <MoreFeatures />
+            <PlusSection />
             <Testimonials />
             <FAQ faqItems={faqItems} />
             <CTASection />

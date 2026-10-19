@@ -15,40 +15,50 @@ export default function FAQ({ faqItems }: FAQProps) {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
-        <section className="py-20 px-6" id="faq">
+        <section className="py-20 px-5" id="faq">
             <div className="max-w-3xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-sans text-center mb-4">
+                <h2 className="large-title text-4xl md:text-6xl text-center mb-4">
                     Got questions?<br />
                     Here are the answers.
                 </h2>
-                <p className="text-gray-600 text-center mb-12">
+                <p className="text-lg text-label-secondary text-center mb-12">
                     Everything you need to know about Reminders+.
                 </p>
 
-                <div className="space-y-3">
-                    {faqItems.map((item, index) => (
-                        <div key={index} className="faq-item">
-                            <button
-                                className="faq-question w-full text-left"
-                                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                            >
-                                <span>{item.question}</span>
-                                <svg
-                                    className={`w-5 h-5 transition-transform text-[#0070E1] ${openIndex === index ? 'rotate-180' : ''}`}
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
+                {/* One grouped list, like a settings section in the app */}
+                <div className="panel overflow-hidden">
+                    {faqItems.map((item, index) => {
+                        const isOpen = openIndex === index;
+                        return (
+                            <div key={index}>
+                                {index > 0 && <div className="h-px bg-separator mx-5" />}
+                                <button
+                                    className="w-full text-left flex items-center justify-between gap-4 px-5 py-4 cursor-pointer"
+                                    aria-expanded={isOpen}
+                                    onClick={() => setOpenIndex(isOpen ? null : index)}
                                 >
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </button>
-                            {openIndex === index && (
-                                <div className="faq-answer">
-                                    {item.answer}
-                                </div>
-                            )}
-                        </div>
-                    ))}
+                                    <span className="text-[17px] font-semibold">{item.question}</span>
+                                    <svg
+                                        className={`w-4 h-4 shrink-0 text-label-tertiary transition-transform ${isOpen ? 'rotate-90' : ''}`}
+                                        aria-hidden="true"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth="2.5"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                    >
+                                        <path d="m9 18 6-6-6-6" />
+                                    </svg>
+                                </button>
+                                {isOpen && (
+                                    <div className="px-5 pb-5 -mt-1 text-[15px] leading-relaxed text-label-secondary">
+                                        {item.answer}
+                                    </div>
+                                )}
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </section>
