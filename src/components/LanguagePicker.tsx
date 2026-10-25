@@ -55,7 +55,12 @@ export default function LanguagePicker({ locale, label }: LanguagePickerProps) {
             className="relative"
             onKeyDown={onKeyDown}
             onBlur={(event) => {
-                if (!rootRef.current?.contains(event.relatedTarget as Node)) setOpen(false);
+                // Close only when focus moves to something else, e.g. Tab out of
+                // the menu. Safari does not focus a link on tap, so pressing a
+                // language blurs with no relatedTarget; closing then hid the list
+                // before the tap landed. Clicks outside are handled above.
+                const next = event.relatedTarget as Node | null;
+                if (next && !rootRef.current?.contains(next)) setOpen(false);
             }}
         >
             <button
