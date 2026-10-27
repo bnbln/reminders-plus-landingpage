@@ -11,7 +11,6 @@ const nl: Dictionary = {
         faq: 'FAQ',
         download: 'Download',
         home: 'Home',
-        logoAlt: 'Reminders+ logo',
     },
     language: {
         label: 'Taal',
@@ -142,7 +141,6 @@ const nl: Dictionary = {
         step2: 'Voeg je eerste taak toe',
         step3: 'Start je reeks!',
         appSubtitle: 'Taken & gewoontes',
-        appIconAlt: 'Reminders+ app-icoon',
         badgeAlt: 'Download in de App Store',
         note: 'Gratis downloaden · Geen account nodig',
     },
@@ -179,20 +177,18 @@ const nl: Dictionary = {
         originalOnly: 'Dit document is alleen beschikbaar in het Engels.',
     },
     a11y: {
-        // Screen reader texts. Mostly invisible, except footerNote.
-        skipToContent: 'Skip to content',
-        mainNav: 'Main',
+        skipToContent: 'Naar inhoud',
+        mainNav: 'Hoofdmenu',
         home: 'Reminders+ home',
-        onAppStore: 'on the App Store',
-        newTab: '(opens in a new tab)',
-        highlights: 'Highlights',
-        // {values}: the number of tasks completed on each day, comma separated.
-        activityChart: 'Activity over the last 14 days. Tasks completed per day: {values}.',
-        taskDone: 'done',
+        onAppStore: 'in de App Store',
+        newTab: '(opent in nieuw tabblad)',
+        highlights: 'Hoogtepunten',
+        activityChart: 'Activiteit van de afgelopen 14 dagen. Voltooide taken per dag: {values}.',
+        taskDone: 'klaar',
         taskOpen: 'open',
-        rating: '5 out of 5 stars',
-        steps: 'Get started in three steps',
-        footerNote: 'Accessible website · built to WCAG 2.1 AA',
+        rating: '5 van 5 sterren',
+        steps: 'In drie stappen aan de slag',
+        footerNote: 'Toegankelijke website · volgens WCAG 2.1 AA',
     },
 };
 

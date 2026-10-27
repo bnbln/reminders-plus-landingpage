@@ -11,7 +11,6 @@ const ja: Dictionary = {
         faq: 'よくある質問',
         download: 'ダウンロード',
         home: 'ホーム',
-        logoAlt: 'Reminders+ ロゴ',
     },
     language: {
         label: '言語',
@@ -142,7 +141,6 @@ const ja: Dictionary = {
         step2: '最初のタスクを追加',
         step3: '連続記録をスタート！',
         appSubtitle: 'タスク＆習慣',
-        appIconAlt: 'Reminders+ アプリアイコン',
         badgeAlt: 'App Store からダウンロード',
         note: '無料ダウンロード · アカウント不要',
     },
@@ -179,20 +177,18 @@ const ja: Dictionary = {
         originalOnly: 'このドキュメントは英語でのみ提供されています。',
     },
     a11y: {
-        // Screen reader texts. Mostly invisible, except footerNote.
-        skipToContent: 'Skip to content',
-        mainNav: 'Main',
-        home: 'Reminders+ home',
-        onAppStore: 'on the App Store',
-        newTab: '(opens in a new tab)',
-        highlights: 'Highlights',
-        // {values}: the number of tasks completed on each day, comma separated.
-        activityChart: 'Activity over the last 14 days. Tasks completed per day: {values}.',
-        taskDone: 'done',
-        taskOpen: 'open',
-        rating: '5 out of 5 stars',
-        steps: 'Get started in three steps',
-        footerNote: 'Accessible website · built to WCAG 2.1 AA',
+        skipToContent: 'コンテンツへスキップ',
+        mainNav: 'メインメニュー',
+        home: 'Reminders+ ホーム',
+        onAppStore: '（App Store）',
+        newTab: '（新しいタブで開きます）',
+        highlights: 'ハイライト',
+        activityChart: '過去14日間のアクティビティ。1日に完了したタスク数：{values}。',
+        taskDone: '完了',
+        taskOpen: '未完了',
+        rating: '5つ星中5つ星',
+        steps: '3ステップで始めよう',
+        footerNote: 'アクセシブルなウェブサイト · WCAG 2.1 AA 準拠',
     },
 };
 

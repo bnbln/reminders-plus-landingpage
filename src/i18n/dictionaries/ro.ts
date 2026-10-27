@@ -11,7 +11,6 @@ const ro: Dictionary = {
         faq: 'Întrebări',
         download: 'Descarcă',
         home: 'Acasă',
-        logoAlt: 'Sigla Reminders+',
     },
     language: {
         label: 'Limbă',
@@ -142,7 +141,6 @@ const ro: Dictionary = {
         step2: 'Adaugă prima sarcină',
         step3: 'Începe-ți seria!',
         appSubtitle: 'Sarcini și obiceiuri',
-        appIconAlt: 'Pictograma aplicației Reminders+',
         badgeAlt: 'Descarcă din App Store',
         note: 'Descărcare gratuită · Fără cont',
     },
@@ -179,20 +177,18 @@ const ro: Dictionary = {
         originalOnly: 'Acest document este disponibil doar în limba engleză.',
     },
     a11y: {
-        // Screen reader texts. Mostly invisible, except footerNote.
-        skipToContent: 'Skip to content',
-        mainNav: 'Main',
-        home: 'Reminders+ home',
-        onAppStore: 'on the App Store',
-        newTab: '(opens in a new tab)',
-        highlights: 'Highlights',
-        // {values}: the number of tasks completed on each day, comma separated.
-        activityChart: 'Activity over the last 14 days. Tasks completed per day: {values}.',
-        taskDone: 'done',
-        taskOpen: 'open',
-        rating: '5 out of 5 stars',
-        steps: 'Get started in three steps',
-        footerNote: 'Accessible website · built to WCAG 2.1 AA',
+        skipToContent: 'Salt la conținut',
+        mainNav: 'Principal',
+        home: 'Acasă Reminders+',
+        onAppStore: 'în App Store',
+        newTab: '(se deschide într-o filă nouă)',
+        highlights: 'Repere',
+        activityChart: 'Activitatea din ultimele 14 zile. Sarcini finalizate pe zi: {values}.',
+        taskDone: 'finalizată',
+        taskOpen: 'deschisă',
+        rating: '5 din 5 stele',
+        steps: 'Începe în trei pași',
+        footerNote: 'Site accesibil · conform WCAG 2.1 AA',
     },
 };
 

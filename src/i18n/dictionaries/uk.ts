@@ -11,7 +11,6 @@ const uk: Dictionary = {
         faq: 'Питання',
         download: 'Завантажити',
         home: 'Головна',
-        logoAlt: 'Логотип Reminders+',
     },
     language: {
         label: 'Мова',
@@ -142,7 +141,6 @@ const uk: Dictionary = {
         step2: 'Додай перше завдання',
         step3: 'Почни свою серію!',
         appSubtitle: 'Завдання й звички',
-        appIconAlt: 'Іконка застосунку Reminders+',
         badgeAlt: 'Завантажте в App Store',
         note: 'Безкоштовно · Без облікового запису',
     },
@@ -179,20 +177,18 @@ const uk: Dictionary = {
         originalOnly: 'Цей документ доступний лише англійською мовою.',
     },
     a11y: {
-        // Screen reader texts. Mostly invisible, except footerNote.
-        skipToContent: 'Skip to content',
-        mainNav: 'Main',
-        home: 'Reminders+ home',
-        onAppStore: 'on the App Store',
-        newTab: '(opens in a new tab)',
-        highlights: 'Highlights',
-        // {values}: the number of tasks completed on each day, comma separated.
-        activityChart: 'Activity over the last 14 days. Tasks completed per day: {values}.',
-        taskDone: 'done',
-        taskOpen: 'open',
-        rating: '5 out of 5 stars',
-        steps: 'Get started in three steps',
-        footerNote: 'Accessible website · built to WCAG 2.1 AA',
+        skipToContent: 'Перейти до вмісту',
+        mainNav: 'Головне меню',
+        home: 'Головна Reminders+',
+        onAppStore: 'в App Store',
+        newTab: '(відкриється в новій вкладці)',
+        highlights: 'Головне',
+        activityChart: 'Активність за останні 14 днів. Виконано завдань за день: {values}.',
+        taskDone: 'виконано',
+        taskOpen: 'відкрито',
+        rating: '5 з 5 зірок',
+        steps: 'Почни за три кроки',
+        footerNote: 'Доступний сайт · за WCAG 2.1 AA',
     },
 };
 

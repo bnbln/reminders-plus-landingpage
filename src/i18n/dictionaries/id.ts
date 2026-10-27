@@ -11,7 +11,6 @@ const id: Dictionary = {
         faq: 'FAQ',
         download: 'Unduh',
         home: 'Beranda',
-        logoAlt: 'Logo Reminders+',
     },
     language: {
         label: 'Bahasa',
@@ -142,7 +141,6 @@ const id: Dictionary = {
         step2: 'Tambahkan tugas pertamamu',
         step3: 'Mulai streak kamu!',
         appSubtitle: 'Tugas & Kebiasaan',
-        appIconAlt: 'Ikon aplikasi Reminders+',
         badgeAlt: 'Unduh di App Store',
         note: 'Unduh gratis · Tidak perlu akun',
     },
@@ -179,20 +177,18 @@ const id: Dictionary = {
         originalOnly: 'Dokumen ini hanya tersedia dalam bahasa Inggris.',
     },
     a11y: {
-        // Screen reader texts. Mostly invisible, except footerNote.
-        skipToContent: 'Skip to content',
-        mainNav: 'Main',
-        home: 'Reminders+ home',
-        onAppStore: 'on the App Store',
-        newTab: '(opens in a new tab)',
-        highlights: 'Highlights',
-        // {values}: the number of tasks completed on each day, comma separated.
-        activityChart: 'Activity over the last 14 days. Tasks completed per day: {values}.',
-        taskDone: 'done',
-        taskOpen: 'open',
-        rating: '5 out of 5 stars',
-        steps: 'Get started in three steps',
-        footerNote: 'Accessible website · built to WCAG 2.1 AA',
+        skipToContent: 'Langsung ke konten',
+        mainNav: 'Menu utama',
+        home: 'Beranda Reminders+',
+        onAppStore: 'di App Store',
+        newTab: '(terbuka di tab baru)',
+        highlights: 'Sorotan',
+        activityChart: 'Aktivitas 14 hari terakhir. Tugas selesai per hari: {values}.',
+        taskDone: 'selesai',
+        taskOpen: 'belum selesai',
+        rating: '5 dari 5 bintang',
+        steps: 'Mulai dalam tiga langkah',
+        footerNote: 'Situs web aksesibel · sesuai WCAG 2.1 AA',
     },
 };
 
