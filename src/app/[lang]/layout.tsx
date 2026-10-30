@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Analytics } from "@vercel/analytics/next";
 import { isLocale, localeInfo, locales, rtlLocales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
+import { SITE_URL } from "@/lib/app-info";
 import "../globals.css";
 
 export const dynamicParams = false;
@@ -17,6 +18,8 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
   const t = getDictionary(lang).meta;
 
   return {
+    // Makes canonical, hreflang and Open Graph URLs absolute.
+    metadataBase: new URL(SITE_URL),
     title: t.title,
     description: t.description,
     openGraph: {
