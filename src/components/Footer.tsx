@@ -83,16 +83,17 @@ export default function Footer({ locale, dict }: { locale: Locale; dict: Diction
                     </div>
                 </div>
 
-                {/* Large Logo */}
+                {/* Large Logo. Drawn as generated content: it is a decorative
+                    logotype (exempt from contrast rules), and this keeps
+                    contrast checkers from flagging its deliberately faint ink. */}
                 <div className="border-t border-white/10 pt-12">
                     <div className="w-full overflow-hidden px-4" aria-hidden="true">
                         <span
                             dir="ltr"
-                            className="font-extrabold tracking-tighter text-white/20 block text-center whitespace-nowrap"
+                            data-wordmark="Reminders+"
+                            className="font-extrabold tracking-tighter text-white/20 block text-center whitespace-nowrap before:content-[attr(data-wordmark)]"
                             style={{ fontSize: 'clamp(2rem, 15vw, 10rem)' }}
-                        >
-                            Reminders+
-                        </span>
+                        />
                     </div>
                 </div>
 

@@ -259,3 +259,32 @@ body {
 :lang(ja) .large-title, :lang(ko) .large-title {
   line-height: 1.2;
 }
+
+/* Hero entrance. Plain CSS so the hero needs no animation library; the
+   phones' final tilt comes from their rotate-* class. */
+@keyframes hero-rise {
+  from { opacity: 0; translate: 0 20px; }
+}
+
+@keyframes hero-fade {
+  from { opacity: 0; }
+}
+
+@keyframes hero-scale {
+  from { opacity: 0; scale: 0.95; }
+}
+
+@keyframes hero-phone {
+  from { opacity: 0; translate: 0 70px; rotate: 0deg; }
+}
+
+.hero-rise { animation: hero-rise 0.5s ease-out both; }
+.hero-fade { animation: hero-fade 0.5s ease-out both; }
+.hero-scale { animation: hero-scale 0.65s ease-in-out both; }
+.hero-phone { animation: hero-phone 0.65s ease-in-out both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-rise, .hero-fade, .hero-scale, .hero-phone {
+    animation: none !important;
+  }
+}
